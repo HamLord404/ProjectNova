@@ -65,7 +65,7 @@ public class StarScreen {
             }
         }
         if(star.getPlanets().get(index).isColonised()){
-            ColonyScreen x = new ColonyScreen();
+            //ColonyScreen x = new ColonyScreen();
             
         } else{
             ColonisationScreen x = new ColonisationScreen(planetData.get(index),empire,starScene,primaryStage);
