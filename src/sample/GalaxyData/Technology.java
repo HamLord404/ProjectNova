@@ -8,9 +8,18 @@ public class Technology {
     private String name;
     private Tech tech;
     private ArrayList<Technology> prereqs = new ArrayList<>();
+    private int cost;
 
     public Technology(){
 
+    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
     public String getName() {

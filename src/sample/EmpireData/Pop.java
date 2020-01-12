@@ -4,10 +4,18 @@ import sample.Enums.Job;
 
 public class Pop {
     private Species species;
-    private Job job;
+    private Job job = Job.FARMER;
 
 
     public Pop(Species species){
+        this.species = species;
+    }
+
+    public Species getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(Species species) {
         this.species = species;
     }
 
@@ -18,4 +26,6 @@ public class Pop {
     public void setJob(Job job) {
         this.job = job;
     }
+
+
 }

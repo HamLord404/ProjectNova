@@ -13,10 +13,10 @@ public class Planet {
     private Temperature temp;
     private Biome biome;
     private boolean colonised = false;
-    private int foodYeild;
-    private int scienceYeild;
-    private int productionYeild;
-    private int creditYeild;
+    private int foodYeild = 2;
+    private int scienceYeild = 2;
+    private int productionYeild = 2;
+    private int creditYeild = 2;
 
     public Planet(){
 
@@ -43,6 +43,38 @@ public class Planet {
         String name = prefix[r.nextInt(prefix.length)] + suffix[r.nextInt(suffix.length)];
 
         return name;
+    }
+
+    public int getFoodYeild() {
+        return foodYeild;
+    }
+
+    public void setFoodYeild(int foodYeild) {
+        this.foodYeild = foodYeild;
+    }
+
+    public int getScienceYeild() {
+        return scienceYeild;
+    }
+
+    public void setScienceYeild(int scienceYeild) {
+        this.scienceYeild = scienceYeild;
+    }
+
+    public int getProductionYeild() {
+        return productionYeild;
+    }
+
+    public void setProductionYeild(int productionYeild) {
+        this.productionYeild = productionYeild;
+    }
+
+    public int getCreditYeild() {
+        return creditYeild;
+    }
+
+    public void setCreditYeild(int creditYeild) {
+        this.creditYeild = creditYeild;
     }
 
     public boolean isColonised() {

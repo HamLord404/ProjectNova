@@ -4,6 +4,7 @@ import javafx.scene.effect.ColorAdjust;
 import sample.Enums.Effect;
 import sample.Enums.GovernmentType;
 import sample.GalaxyData.Planet;
+import sample.GalaxyData.Technology;
 import sample.PoliticalParty;
 import sample.GalaxyData.Star;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class Empire {
     private ArrayList<Modifier> modifiers = new ArrayList<Modifier>();
     private PoliticalParty rulingParty;
     private ArrayList<PoliticalParty> parties = new ArrayList<>();
+    private Technology currentResearch;
     private double credits = 100;
     private int stability = 80;
     private int science = 0;
@@ -43,9 +45,16 @@ public class Empire {
 
     public void processTurn(){
         for (Colony c: colonies) {
-            c.turnTick();
+            c.turnTick(this);
         }
 
+    }
+
+    public void addScience(double science){
+        this.science += science;
+        if(science >= currentResearch.getCost()){
+
+        }
     }
 
     public double searchForModifier(Effect effect){
@@ -68,6 +77,14 @@ public class Empire {
         mapColor.setHue(hue);
         mapColor.setBrightness(brightness);
         mapColor.setSaturation(saturation);
+    }
+
+    public Technology getCurrentResearch() {
+        return currentResearch;
+    }
+
+    public void setCurrentResearch(Technology currentResearch) {
+        this.currentResearch = currentResearch;
     }
 
     public int getInfluence() {
