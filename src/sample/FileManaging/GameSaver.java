@@ -25,12 +25,13 @@ public class GameSaver {
 
         for(int i = 0; i < galaxy.getMapX(); i++){
             for(int j = 0; j < galaxy.getMapY(); j++){
+                //save stars
                 Star temp = galaxy.getGrid()[i][j];
                 fw.append(temp.getType().ordinal() + "," +
                         temp.getPlanets().size());
                 if(temp.getPlanets().size() != 0){
                     String s = "";
-
+                    //save planets
                     for(int p = 0; p < temp.getPlanets().size(); p++){
                         Planet planet = temp.getPlanets().get(p);
                         s = s + planet.getName() + "," +
@@ -41,6 +42,8 @@ public class GameSaver {
                 }
             }
         }
+
+
 
 
         fw.close();

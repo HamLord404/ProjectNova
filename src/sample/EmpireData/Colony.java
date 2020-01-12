@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Colony {
 
     private ArrayList<Pop> pops = new ArrayList<>();
+    private ArrayList<Improvement> improvements = new ArrayList<Improvement>();
     private Planet planet;
     private int growthProgress;
     private int productionProgress;
@@ -40,4 +41,11 @@ public class Colony {
 
     }
 
+    public Planet getPlanet() {
+        return planet;
+    }
+
+    public void setPlanet(Planet planet) {
+        this.planet = planet;
+    }
 }
