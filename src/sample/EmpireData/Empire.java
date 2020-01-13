@@ -15,6 +15,7 @@ public class Empire {
     private ArrayList<Star> territory = new ArrayList<>();
     private ArrayList<Colony> colonies = new ArrayList<>();
     private ArrayList<Modifier> modifiers = new ArrayList<Modifier>();
+    //private ArrayList<>
     private PoliticalParty rulingParty;
     private ArrayList<PoliticalParty> parties = new ArrayList<>();
     private Technology currentResearch;
