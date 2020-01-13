@@ -31,6 +31,8 @@ public class ColonyScreen {
         this.c = c;
         this.e = e;
 
+        //String turnlyProduction = c.getTurnlyProduction();
+
         
     }
 

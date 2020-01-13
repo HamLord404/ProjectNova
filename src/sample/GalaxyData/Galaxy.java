@@ -62,6 +62,7 @@ public class Galaxy {
         Colony homeworld = new Colony(p);
         homeworld.addPop(e.getFounders(),5);
         e.getColonies().add(homeworld);
+        p.setColonised(true);
 
         e.annexStar(s);
 

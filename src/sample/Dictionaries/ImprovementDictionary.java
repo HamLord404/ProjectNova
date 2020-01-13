@@ -14,7 +14,6 @@ public class ImprovementDictionary {
             case HYDROPONICS_FARMS:
                 improvement.setName("Hydroponics Farms");
                 improvement.setProductionCost(45);
-                //improvement.setMod();
             case FACTORY:
                 improvement.setName("Factory");
                 improvement.setProductionCost(45);
@@ -24,6 +23,9 @@ public class ImprovementDictionary {
             case ARCOLOGY:
                 improvement.setName("Arcology");
                 improvement.setProductionCost(125);
+            case SHIPYARD:
+                improvement.setName("Shipyard");
+                improvement.setProductionCost(120);
 
         }
 

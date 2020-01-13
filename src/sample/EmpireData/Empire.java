@@ -21,7 +21,7 @@ public class Empire {
     private double credits = 100;
     private int stability = 80;
     private int science = 0;
-    private int influence = 0;
+    private double influence = 0;
     private Species founders;
     private ArrayList<Fleet> fleets = new ArrayList<>();
     private ColorAdjust mapColor = new ColorAdjust();
@@ -40,6 +40,7 @@ public class Empire {
     public void colonisePlanet(Planet planet){
         Colony c = new Colony(planet);
         colonies.add(c);
+        planet.setColonised(true);
         c.addPop(founders, (int)searchForModifier(Effect.STARTING_COLONY_POP));
     }
 
@@ -87,11 +88,11 @@ public class Empire {
         this.currentResearch = currentResearch;
     }
 
-    public int getInfluence() {
+    public double getInfluence() {
         return influence;
     }
 
-    public void setInfluence(int influence) {
+    public void setInfluence(double influence) {
         this.influence = influence;
     }
 

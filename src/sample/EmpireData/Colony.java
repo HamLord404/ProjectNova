@@ -33,6 +33,7 @@ public class Colony {
         double food = 0;
         double production = 0;
         double science = 0;
+        double influence = 1;
 
 
 
@@ -69,13 +70,13 @@ public class Colony {
         productionProgress += production;
 
         if(growthProgress >= growthThreshold){
-            addPop(CalculateNewPopToGrow(),1);
+            addPop(CalculateNewPopToGrow(e),1);
             growthProgress = 0;
         }
 
         e.addScience(science);
 
-
+        e.setInfluence(e.getInfluence()+influence);
 
         //TODO::Do production stuff
         //if(productionProgress >= ){
@@ -84,7 +85,52 @@ public class Colony {
 
     }
 
-    public Species CalculateNewPopToGrow(){
+    public int getTurnlyProduction(Empire e){
+        int production = 0;
+        for(Pop p : pops){
+
+            if(p.getJob() == Job.WORKER){
+                production  += 2 + p.getSpecies().getProductionBonus();
+            }
+
+        }
+
+        production *= e.searchForModifier(Effect.EMPIRE_PRODUCTION);
+
+        return production;
+    }
+
+    public int getTurnlyFood(Empire e){
+        int food = 0;
+        for(Pop p : pops){
+
+            if(p.getJob() == Job.FARMER){
+                food  += 2 + p.getSpecies().getFoodBonus();
+            }
+
+        }
+
+        food *= e.searchForModifier(Effect.EMPIRE_FOOD);
+
+        return food;
+    }
+
+    public int getTurnlyScience(Empire e){
+        int science = 0;
+        for(Pop p : pops){
+
+            if(p.getJob() == Job.SCIENTIST){
+                science  += 2 + p.getSpecies().getScienceBonus();
+            }
+
+        }
+
+        science *= e.searchForModifier(Effect.EMPIRE_SCIENCE);
+
+        return science;
+    }
+
+    public Species CalculateNewPopToGrow(Empire e){
         Species species;
         Random r = new Random();
         int index = r.nextInt(pops.size());
