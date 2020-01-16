@@ -1,21 +1,12 @@
 package sample.EmpireData;
 
-import sample.Enums.ImprovementType;
+import sample.Enums.BuildType;
 
-public class Improvement extends Buildable{
+public class Buildable {
     private String name;
-    private ImprovementType type;
+    private BuildType type;
     private int productionCost;
-    private Modifier mod;
-
-
-    public Modifier getMod() {
-        return mod;
-    }
-
-    public void setMod(Modifier mod) {
-        this.mod = mod;
-    }
+    private int maintenanceCost;
 
     public String getName() {
         return name;
@@ -25,11 +16,11 @@ public class Improvement extends Buildable{
         this.name = name;
     }
 
-    public ImprovementType getType() {
+    public BuildType getType() {
         return type;
     }
 
-    public void setType(ImprovementType type) {
+    public void setType(BuildType type) {
         this.type = type;
     }
 
@@ -39,5 +30,13 @@ public class Improvement extends Buildable{
 
     public void setProductionCost(int productionCost) {
         this.productionCost = productionCost;
+    }
+
+    public int getMaintenanceCost() {
+        return maintenanceCost;
+    }
+
+    public void setMaintenanceCost(int maintenanceCost) {
+        this.maintenanceCost = maintenanceCost;
     }
 }

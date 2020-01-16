@@ -2,7 +2,7 @@ package sample.EmpireData;
 
 import sample.Enums.ShipClass;
 
-public class Ship {
+public class Ship extends Buildable{
     private String name;
     private ShipClass shipClass;
     private double speed;
