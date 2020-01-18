@@ -6,9 +6,9 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 public class ButtonList {
-    ArrayList<Button> buttons = new ArrayList<>();
-    Group group = new Group();
-    Pane root;
+    private ArrayList<Button> buttons = new ArrayList<>();
+    private Group group = new Group();
+    private Pane root;
 
 
     public ButtonList(Pane root,String[] buttonTexts,int posX,int posY){
@@ -29,5 +29,11 @@ public class ButtonList {
         root.getChildren().add(group);
     }
 
+    public ArrayList<Button> getButtons() {
+        return buttons;
+    }
 
+    public void setButtons(ArrayList<Button> buttons) {
+        this.buttons = buttons;
+    }
 }
