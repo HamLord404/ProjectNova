@@ -19,6 +19,8 @@ public class ButtonList {
             group.getChildren().add(newButton.getLabel());
         }
 
+        System.out.println("ButtonList");
+
         group.setTranslateX(posX);
         group.setTranslateY(posY);
     }

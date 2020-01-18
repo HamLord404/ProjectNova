@@ -4,7 +4,7 @@ import sample.Enums.BuildType;
 
 public class Buildable {
     private String name;
-    private BuildType type;
+    private BuildType buildableType;
     private int productionCost;
     private int maintenanceCost;
 
@@ -16,12 +16,12 @@ public class Buildable {
         this.name = name;
     }
 
-    public BuildType getType() {
-        return type;
+    public BuildType getBuildableType() {
+        return buildableType;
     }
 
-    public void setType(BuildType type) {
-        this.type = type;
+    public void setBuildableType(BuildType buildableType) {
+        this.buildableType = buildableType;
     }
 
     public int getProductionCost() {

@@ -19,19 +19,21 @@ public class Fleet {
         this.x = x;
         this.y = y;
 
-
     }
 
     public void destroyShip(Ship ship){
 
-
         if(ship.getShipClass() == ShipClass.BATTLESHIP){
-            morale = morale - 33;
+            morale = morale - 15;
         } else if(ship.getShipClass() == ShipClass.FRIGATE){
-            morale = morale - 10;
+            morale = morale - 5;
         }
 
         ships.remove(ship);
+    }
+
+    public void addShip(Ship ship){
+        ships.add(ship);
     }
 
     public Leader getAdmiral() {
@@ -40,10 +42,6 @@ public class Fleet {
 
     public void setAdmiral(Leader admiral) {
         this.admiral = admiral;
-    }
-
-    public void addShip(Ship ship){
-        ships.add(ship);
     }
 
     public double getMorale() {

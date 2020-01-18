@@ -1,5 +1,6 @@
 package sample.EmpireData;
 
+import sample.Enums.BuildType;
 import sample.Enums.Effect;
 import sample.Enums.Job;
 import sample.Enums.TraitEnum;
@@ -16,7 +17,7 @@ public class Colony {
     private int growthProgress;
     final int growthThreshold = 300;
     private int productionProgress;
-
+    private Buildable currentConstruction;
 
 
     public Colony(Planet planet){
@@ -85,6 +86,12 @@ public class Colony {
 
     }
 
+    public void findFleetForShip(Ship ship,Empire e){
+        for (Fleet f: e.getFleets()) {
+
+        }
+    }
+
     public int getTurnlyProduction(Empire e){
         int production = 0;
         for(Pop p : pops){
@@ -142,6 +149,14 @@ public class Colony {
 
     public void GrowBorders(){
 
+    }
+
+    public Buildable getCurrentConstruction() {
+        return currentConstruction;
+    }
+
+    public void setCurrentConstruction(Buildable currentConstruction) {
+        this.currentConstruction = currentConstruction;
     }
 
     public Planet getPlanet() {

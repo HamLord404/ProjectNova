@@ -12,6 +12,7 @@ public class Ship extends Buildable{
     private double armour;
     private double agility;
     private double morale;
+    private int movement;
     private double xp;
     private int level;
     private Ship target;
@@ -19,6 +20,14 @@ public class Ship extends Buildable{
 
     public Ship(){
 
+    }
+
+    public int getMovement() {
+        return movement;
+    }
+
+    public void setMovement(int movement) {
+        this.movement = movement;
     }
 
     public void assignTarget(Ship target){

@@ -43,6 +43,8 @@ public class ColonyScreen {
         back.getSegmentGroup().setOnMouseClicked(this::backToLastScreen);
         back.getLabel().setOnMouseClicked(this::backToLastScreen);
 
+        String[] options = {"Light Ship","Heavy Ship"}; 
+        productionOptions = new ButtonList(root,options,0,0);
 
         
     }
