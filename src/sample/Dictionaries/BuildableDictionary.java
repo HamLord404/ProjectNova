@@ -17,8 +17,10 @@ public class BuildableDictionary {
         switch (s){
             case "Light Ship":
                 newbuildable = buildShip("light",e);
+                break;
             case "Heavy Ship":
                 newbuildable = buildShip("heavy",e);
+                break;
         }
 
         return newbuildable;
@@ -38,6 +40,7 @@ public class BuildableDictionary {
                 newShip.setShields(1);
                 newShip.setWeapons(1 * e.searchForModifier(Effect.SHIP_WEAPONS));
                 newShip.setMovement(2);
+                break;
             case "light":
                 newShip.setName("Light Ship");
                 newShip.setProductionCost(45);
@@ -50,6 +53,7 @@ public class BuildableDictionary {
                 newShip.setMovement(3);
                 newShip.setLevel((int)e.searchForModifier(Effect.MILITARY_UNIT_LEVEL));
                 newShip.setXp(0);
+                break;
             case "heavy":
                 newShip.setName("Heavy Ship");
                 newShip.setProductionCost(150);
@@ -62,6 +66,7 @@ public class BuildableDictionary {
                 newShip.setMovement(2);
                 newShip.setLevel((int)e.searchForModifier(Effect.MILITARY_UNIT_LEVEL));
                 newShip.setXp(0);
+                break;
         }
 
 
