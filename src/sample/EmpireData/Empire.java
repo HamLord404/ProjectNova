@@ -36,8 +36,8 @@ public class Empire {
         mapColor.setSaturation(1);
     }
 
-    public void colonisePlanet(Planet planet){
-        Colony c = new Colony(planet);
+    public void colonisePlanet(Planet planet,int x,int y){
+        Colony c = new Colony(planet,x,y);
         colonies.add(c);
         planet.setColonised(true);
         c.addPop(founders, (int)searchForModifier(Effect.STARTING_COLONY_POP));

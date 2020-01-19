@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/sample/Dictionaries/BuildableDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Dictionaries/BuildableDictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/EmpireData/Colony.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/EmpireData/Colony.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/EmpireData/Fleet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/EmpireData/Fleet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,55 +66,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Screens/ColonyScreen.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="284">
               <caret line="79" column="57" selection-start-line="79" selection-start-column="57" selection-end-line="79" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Screens/MainMenuScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Screens/PasswordCreationScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Screens/SpeciesCreationScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="596">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addToolTips#0;class#SpeciesCreationScreen#0" />
-                <element signature="method#selectPick#0;class#SpeciesCreationScreen#0" />
-                <element signature="method#addMutuallyExclusives#0;class#SpeciesCreationScreen#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Screens/StarScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -128,19 +98,70 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Colony.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="187">
+              <caret line="99" column="54" lean-forward="true" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
               <folding>
                 <element signature="method#addPop#0;class#Colony#0" />
                 <element signature="method#findFleetForShip#0;class#Colony#0" />
                 <element signature="method#getTurnlyProduction#0;class#Colony#0" />
                 <element signature="method#getTurnlyFood#0;class#Colony#0" />
                 <element signature="method#getTurnlyScience#0;class#Colony#0" />
-                <element signature="e#3687#3688#0" expanded="true" />
-                <element signature="e#3729#3730#0" expanded="true" />
+                <element signature="e#4090#4091#0" expanded="true" />
+                <element signature="e#4114#4115#0" expanded="true" />
+                <element signature="e#4145#4146#0" expanded="true" />
+                <element signature="e#4171#4172#0" expanded="true" />
+                <element signature="e#4196#4197#0" expanded="true" />
+                <element signature="e#4220#4221#0" expanded="true" />
+                <element signature="e#4251#4252#0" expanded="true" />
+                <element signature="e#4277#4278#0" expanded="true" />
+                <element signature="e#4538#4539#0" expanded="true" />
+                <element signature="e#4735#4736#0" expanded="true" />
+                <element signature="e#4815#4816#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="61" column="59" lean-forward="true" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+              <folding>
+                <element signature="method#createGalaxy#0;class#Galaxy#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Star.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Planet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Fleet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,19 +184,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Screens/LoginScreen.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Dictionaries/BuildableDictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+            <state relative-caret-position="763">
+              <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#buildImprovement#0;class#BuildableDictionary#0" />
@@ -250,18 +262,18 @@
         <option value="$PROJECT_DIR$/src/sample/Enums/Effect.java" />
         <option value="$PROJECT_DIR$/src/sample/Dictionaries/ImprovementDictionary.java" />
         <option value="$PROJECT_DIR$/src/sample/Screens/StarScreen.java" />
-        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" />
         <option value="$PROJECT_DIR$/src/sample/Enums/BuildType.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Ship.java" />
-        <option value="$PROJECT_DIR$/src/sample/EmpireData/Fleet.java" />
-        <option value="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" />
         <option value="$PROJECT_DIR$/src/sample/Dictionaries/TechnologyDictionary.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Buildable.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Improvement.java" />
-        <option value="$PROJECT_DIR$/src/sample/EmpireData/Colony.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/ButtonList.java" />
         <option value="$PROJECT_DIR$/src/sample/Screens/ColonyScreen.java" />
         <option value="$PROJECT_DIR$/src/sample/Dictionaries/BuildableDictionary.java" />
+        <option value="$PROJECT_DIR$/src/sample/EmpireData/Fleet.java" />
+        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" />
+        <option value="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" />
+        <option value="$PROJECT_DIR$/src/sample/EmpireData/Colony.java" />
       </list>
     </option>
   </component>
@@ -307,6 +319,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="Dictionaries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectNova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectNova" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="EmpireData" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectNova" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjectNova" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="GalaxyData" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectNova" type="b2602c69:ProjectViewProjectNode" />
@@ -453,7 +479,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.34228188" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.34228188" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -462,7 +488,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3611898" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3611898" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -497,16 +523,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="86" column="63" lean-forward="true" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Leader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -686,23 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Planet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="method#createGalaxy#0;class#Galaxy#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/UIElements/Panel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -748,28 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Fleet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#936#937#0" expanded="true" />
-            <element signature="e#1318#1319#0" expanded="true" />
-            <element signature="e#1348#1349#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1473#1474#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1552#1553#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Dictionaries/TraitDictionary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -786,16 +763,6 @@
             <element signature="e#534#535#0" expanded="true" />
             <element signature="e#579#580#0" expanded="true" />
             <element signature="e#619#620#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -908,22 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Colony.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding>
-            <element signature="method#addPop#0;class#Colony#0" />
-            <element signature="method#findFleetForShip#0;class#Colony#0" />
-            <element signature="method#getTurnlyProduction#0;class#Colony#0" />
-            <element signature="method#getTurnlyFood#0;class#Colony#0" />
-            <element signature="method#getTurnlyScience#0;class#Colony#0" />
-            <element signature="e#3687#3688#0" expanded="true" />
-            <element signature="e#3729#3730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/UIElements/ButtonList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -950,12 +901,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Dictionaries/BuildableDictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="763">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#buildImprovement#0;class#BuildableDictionary#0" />
             <element signature="method#makeThing#0;class#BuildableDictionary#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Fleet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Planet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Star.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="61" column="59" lean-forward="true" selection-start-line="61" selection-start-column="59" selection-end-line="61" selection-end-column="59" />
+          <folding>
+            <element signature="method#createGalaxy#0;class#Galaxy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Colony.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="99" column="54" lean-forward="true" selection-start-line="99" selection-start-column="54" selection-end-line="99" selection-end-column="54" />
+          <folding>
+            <element signature="method#addPop#0;class#Colony#0" />
+            <element signature="method#findFleetForShip#0;class#Colony#0" />
+            <element signature="method#getTurnlyProduction#0;class#Colony#0" />
+            <element signature="method#getTurnlyFood#0;class#Colony#0" />
+            <element signature="method#getTurnlyScience#0;class#Colony#0" />
+            <element signature="e#4090#4091#0" expanded="true" />
+            <element signature="e#4114#4115#0" expanded="true" />
+            <element signature="e#4145#4146#0" expanded="true" />
+            <element signature="e#4171#4172#0" expanded="true" />
+            <element signature="e#4196#4197#0" expanded="true" />
+            <element signature="e#4220#4221#0" expanded="true" />
+            <element signature="e#4251#4252#0" expanded="true" />
+            <element signature="e#4277#4278#0" expanded="true" />
+            <element signature="e#4538#4539#0" expanded="true" />
+            <element signature="e#4735#4736#0" expanded="true" />
+            <element signature="e#4815#4816#0" expanded="true" />
           </folding>
         </state>
       </provider>

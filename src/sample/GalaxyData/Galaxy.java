@@ -59,7 +59,7 @@ public class Galaxy {
 
         s.getPlanets().add(p);
 
-        Colony homeworld = new Colony(p);
+        Colony homeworld = new Colony(p,s.getX(),s.getY());
         homeworld.addPop(e.getFounders(),5);
         e.getColonies().add(homeworld);
         p.setColonised(true);

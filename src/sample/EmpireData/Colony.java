@@ -1,10 +1,12 @@
 package sample.EmpireData;
 
+import sample.Dictionaries.BuildableDictionary;
 import sample.Enums.BuildType;
 import sample.Enums.Effect;
 import sample.Enums.Job;
 import sample.Enums.TraitEnum;
 import sample.GalaxyData.Planet;
+import sample.GalaxyData.Star;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -18,10 +20,15 @@ public class Colony {
     final int growthThreshold = 300;
     private int productionProgress;
     private Buildable currentConstruction;
+    //private Star location;
+    private int x;
+    private int y;
 
 
-    public Colony(Planet planet){
+    public Colony(Planet planet,int x,int y){
         this.planet = planet;
+        this.x = x;
+        this.y = y;
     }
 
     public void addPop(Species species, int popCount){
@@ -68,8 +75,8 @@ public class Colony {
         //pops consume production
 
         growthProgress += food;
-        productionProgress += production;
 
+        productionProgress += production;
         if(growthProgress >= growthThreshold){
             addPop(CalculateNewPopToGrow(e),1);
             growthProgress = 0;
@@ -79,11 +86,22 @@ public class Colony {
 
         e.setInfluence(e.getInfluence()+influence);
 
-        //TODO::Do production stuff
-        //if(productionProgress >= ){
 
-        //}
 
+        if(productionProgress >= currentConstruction.getProductionCost()){
+            productionProgress = 0;
+            finishProduction(e);
+        }
+
+    }
+
+    public void finishProduction(Empire e){
+        if(currentConstruction.getBuildableType() == BuildType.SHIP){
+            ArrayList<Ship> ships = new ArrayList<>();
+            ships.add((Ship)currentConstruction);
+            Fleet newFleet = new Fleet(e,x,y,ships);
+            e.getFleets().add(newFleet);
+        }
     }
 
     public void findFleetForShip(Ship ship,Empire e){
@@ -149,6 +167,22 @@ public class Colony {
 
     public void GrowBorders(){
 
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 
     public Buildable getCurrentConstruction() {

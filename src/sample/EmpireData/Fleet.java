@@ -14,10 +14,11 @@ public class Fleet {
     private int y;
 
 
-    public Fleet(Empire loyalty,int x,int y){
+    public Fleet(Empire loyalty,int x,int y,ArrayList<Ship> ships){
         this.loyalty = loyalty;
         this.x = x;
         this.y = y;
+        this.ships = ships;
 
     }
 
