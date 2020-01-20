@@ -2,8 +2,8 @@ package sample.GalaxyData;
 
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import sample.EmpireData.Colony;
-import sample.EmpireData.Empire;
+import sample.Dictionaries.BuildableDictionary;
+import sample.EmpireData.*;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -63,6 +63,14 @@ public class Galaxy {
         homeworld.addPop(e.getFounders(),5);
         e.getColonies().add(homeworld);
         p.setColonised(true);
+
+        Buildable testShip = BuildableDictionary.getBuildable("Light Ship",e);
+
+        ArrayList<Ship> ships = new ArrayList<Ship>();
+
+        ships.add((Ship)testShip);
+
+        Fleet f = new Fleet(e,s.getX(),s.getY(),ships,root);
 
         e.annexStar(s);
 

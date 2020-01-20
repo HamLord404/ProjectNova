@@ -15,6 +15,9 @@ public class BuildableDictionary {
         Buildable newbuildable = new Buildable();
 
         switch (s){
+            case "Colony Ship":
+                newbuildable = buildShip("colony",e);
+                break;
             case "Light Ship":
                 newbuildable = buildShip("light",e);
                 break;

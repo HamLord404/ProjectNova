@@ -18,7 +18,7 @@ public class ColonyScreen {
     Pane root = new Pane();
     Scene ColonyScene = new Scene(root,1000,500);
     LabelBackground production = new LabelBackground("Production",root,9,0);
-    LabelBackground planetName = new LabelBackground("",root,1,0);
+    LabelBackground planetName = new LabelBackground("beep boop beep boop",root,1,0);
     ButtonList productionOptions;
     Panel stats;
     Button back = new Button("Back",root,0,0);
@@ -38,11 +38,10 @@ public class ColonyScreen {
         panelText(c, e);
 
 
-
         back.getSegmentGroup().setOnMouseClicked(this::backToLastScreen);
         back.getLabel().setOnMouseClicked(this::backToLastScreen);
 
-        String[] options = {"Light Ship","Heavy Ship"};
+        String[] options = {"Colony Ship","Light Ship","Heavy Ship"};
         productionOptions = new ButtonList(root,options,840,30);
 
         for(Button b : productionOptions.getButtons()){

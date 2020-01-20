@@ -99,8 +99,8 @@ public class Colony {
         if(currentConstruction.getBuildableType() == BuildType.SHIP){
             ArrayList<Ship> ships = new ArrayList<>();
             ships.add((Ship)currentConstruction);
-            Fleet newFleet = new Fleet(e,x,y,ships);
-            e.getFleets().add(newFleet);
+            //Fleet newFleet = new Fleet(e,x,y,ships);
+            //e.getFleets().add(newFleet);
         }
     }
 

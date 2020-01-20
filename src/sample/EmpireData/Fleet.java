@@ -1,11 +1,15 @@
 package sample.EmpireData;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import sample.Enums.ShipClass;
 import sample.Leader;
 
 import java.util.ArrayList;
 
 public class Fleet {
+    private ImageView sprite = new ImageView("FleetIcon.png");
     private Empire loyalty;
     private Leader admiral;
     private ArrayList<Ship> ships = new ArrayList<>();
@@ -14,11 +18,23 @@ public class Fleet {
     private int y;
 
 
-    public Fleet(Empire loyalty,int x,int y,ArrayList<Ship> ships){
+    public Fleet(Empire loyalty, int x, int y, ArrayList<Ship> ships, Pane root){
         this.loyalty = loyalty;
         this.x = x;
         this.y = y;
         this.ships = ships;
+        root.getChildren().add(sprite);
+        Image Hex = new Image("Hex.png");
+
+
+        if(y % 2 == 0) {
+            sprite.setTranslateX( ((1.5*x) * Hex.getWidth()) + 24);
+            sprite.setTranslateY(((y * (Hex.getHeight()/2))+35) - 5);
+        } else {
+            sprite.setTranslateX( ((1.5*x) * Hex.getWidth() + (Hex.getWidth()*0.75)) + 24);
+            sprite.setTranslateY(((y * (Hex.getHeight()/2))+35) - 5);
+        }
+
 
     }
 

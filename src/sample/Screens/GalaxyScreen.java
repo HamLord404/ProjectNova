@@ -11,7 +11,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import sample.Dictionaries.BuildableDictionary;
+import sample.EmpireData.Buildable;
 import sample.EmpireData.Empire;
+import sample.EmpireData.Fleet;
+import sample.EmpireData.Ship;
 import sample.FileManaging.GameSaver;
 import sample.GalaxyData.Galaxy;
 import sample.GalaxyData.Hex;
@@ -21,6 +25,7 @@ import sample.UIElements.Button;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class GalaxyScreen {

@@ -77,7 +77,6 @@ public class StarScreen {
             primaryStage.setScene(x.ColonyScene);
             
         } else{
-            System.out.println("uncolonised");
             ColonisationScreen x = new ColonisationScreen(planetData.get(index),empire,starScene,primaryStage);
             primaryStage.setScene(x.colonisationScene);
         }
