@@ -52,8 +52,10 @@ public class Empire {
 
     public void addScience(double science){
         this.science += science;
-        if(science >= currentResearch.getCost()){
+        if(currentResearch != null) {
+            if (science >= currentResearch.getCost()) {
 
+            }
         }
     }
 

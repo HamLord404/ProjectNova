@@ -80,11 +80,6 @@ public class Galaxy {
 
     }
 
-
-
-
-
-
     public ArrayList<Star> getStars() {
         return stars;
     }

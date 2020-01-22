@@ -5,8 +5,10 @@ import sample.Enums.BuildType;
 import sample.Enums.Effect;
 import sample.Enums.Job;
 import sample.Enums.TraitEnum;
+import sample.GalaxyData.Galaxy;
 import sample.GalaxyData.Planet;
 import sample.GalaxyData.Star;
+import sample.Screens.GalaxyScreen;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -23,6 +25,7 @@ public class Colony {
     //private Star location;
     private int x;
     private int y;
+    private int expandCount = 0;
 
 
     public Colony(Planet planet,int x,int y){
@@ -102,6 +105,10 @@ public class Colony {
             //Fleet newFleet = new Fleet(e,x,y,ships);
             //e.getFleets().add(newFleet);
         }
+    }
+
+    public void expandBorders(Empire e,Galaxy g){
+        
     }
 
     public void findFleetForShip(Ship ship,Empire e){

@@ -1,7 +1,10 @@
 package sample.GalaxyData;
 
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+
+
 
 public class Hex {
     private ImageView sprite = new ImageView("Hex.png");
@@ -20,9 +23,14 @@ public class Hex {
             sprite.setTranslateY((y * (sprite.getImage().getHeight()/2))+35);
         }
 
+        //sprite.setOnMouseEntered(this::temp);
 
         this.x = x;
         this.y = y;
+    }
+
+    public void temp(MouseEvent event){
+        System.out.println("x: " + x + " y: " + y);
     }
 
     public ImageView getSprite() {
