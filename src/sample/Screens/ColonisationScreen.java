@@ -9,6 +9,7 @@ import sample.Enums.Effect;
 import sample.GalaxyData.Planet;
 import sample.UIElements.Button;
 import sample.UIElements.Panel;
+import sample.UIElements.SmallButton;
 
 public class ColonisationScreen {
     Planet planet;

@@ -90,7 +90,6 @@ public class Colony {
         e.setInfluence(e.getInfluence()+influence);
 
 
-
         if(productionProgress >= currentConstruction.getProductionCost()){
             productionProgress = 0;
             finishProduction(e);
@@ -108,7 +107,7 @@ public class Colony {
     }
 
     public void expandBorders(Empire e,Galaxy g){
-        
+
     }
 
     public void findFleetForShip(Ship ship,Empire e){

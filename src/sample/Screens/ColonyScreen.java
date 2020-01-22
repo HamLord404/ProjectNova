@@ -7,10 +7,7 @@ import javafx.stage.Stage;
 import sample.Dictionaries.BuildableDictionary;
 import sample.EmpireData.Colony;
 import sample.EmpireData.Empire;
-import sample.UIElements.Button;
-import sample.UIElements.ButtonList;
-import sample.UIElements.LabelBackground;
-import sample.UIElements.Panel;
+import sample.UIElements.*;
 
 import java.util.ArrayList;
 
@@ -22,6 +19,9 @@ public class ColonyScreen {
     ButtonList productionOptions;
     Panel stats;
     Button back = new Button("Back",root,0,0);
+
+    SmallButton plusScientist = new SmallButton(root,"+",300,300);
+    SmallButton minusScientist = new SmallButton(root,"-",300,350);
 
     Colony c;
     Empire e;
