@@ -30,8 +30,6 @@ public class Button {
 
     public Button(String text, Pane root, int posX, int posY){
 
-
-
         label.setText(text);
         label.setFont(new Font("OCR A Extended", 12));
         correctSize(root,posX, posY);

@@ -64,13 +64,13 @@ public class Galaxy {
         e.getColonies().add(homeworld);
         p.setColonised(true);
 
-        Buildable testShip = BuildableDictionary.getBuildable("Light Ship",e);
+        //Buildable testShip = BuildableDictionary.getBuildable("Light Ship",e);
 
-        ArrayList<Ship> ships = new ArrayList<Ship>();
+        //ArrayList<Ship> ships = new ArrayList<Ship>();
 
-        ships.add((Ship)testShip);
+        //ships.add((Ship)testShip);
 
-        Fleet f = new Fleet(e,s.getX(),s.getY(),ships,root);
+        //Fleet f = new Fleet(e,s.getX(),s.getY(),ships,root);
 
         e.annexStar(s);
 

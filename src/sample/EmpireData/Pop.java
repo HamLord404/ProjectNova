@@ -4,7 +4,7 @@ import sample.Enums.Job;
 
 public class Pop {
     private Species species;
-    private Job job = Job.FARMER;
+    private Job job = Job.WORKER;
 
 
     public Pop(Species species){

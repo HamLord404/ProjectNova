@@ -70,7 +70,6 @@ public class GalaxyScreen {
         });
 
 
-
         root.getChildren().add(topBar);
         root.getChildren().add(GC);
         root.getChildren().add(sci);
@@ -91,6 +90,9 @@ public class GalaxyScreen {
 
                 grid[i][j] = new Hex(root,i,j);
                 grid[i][j].getSprite().setOnMouseClicked(this::SelectHex);
+                //grid[i][j].getSprite().setScaleX(0.25);
+               // grid[i][j].getSprite().setScaleY(0.25);
+                //grid[i][j].getSprite().setOpacity(0.8);
             }
         }
     }
@@ -151,7 +153,8 @@ public class GalaxyScreen {
             }
         }
 
-
+        //empire.annexStar(galaxy.getGrid()[x][y]);
+        //updateHexGrid();
 
         Star temp = galaxy.getGrid()[x][y];
 
@@ -165,6 +168,8 @@ public class GalaxyScreen {
             primaryStage.setScene(starScreen.starScene);
         }
 
+
+
     }
 
     public void processHotkey(KeyEvent event) throws IOException {
@@ -175,7 +180,7 @@ public class GalaxyScreen {
     }
 
     public void endTurn(MouseEvent event){
-        empire.processTurn();
+        empire.processTurn(root);
     }
 
 }

@@ -1,6 +1,7 @@
 package sample.EmpireData;
 
 import javafx.scene.effect.ColorAdjust;
+import javafx.scene.layout.Pane;
 import sample.Enums.Effect;
 import sample.Enums.GovernmentType;
 import sample.GalaxyData.Planet;
@@ -43,9 +44,9 @@ public class Empire {
         c.addPop(founders, (int)searchForModifier(Effect.STARTING_COLONY_POP));
     }
 
-    public void processTurn(){
+    public void processTurn(Pane root){
         for (Colony c: colonies) {
-            c.turnTick(this);
+            c.turnTick(this,root);
         }
 
     }

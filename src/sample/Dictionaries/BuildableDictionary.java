@@ -14,6 +14,7 @@ public class BuildableDictionary {
     public static Buildable getBuildable(String s, Empire e){
         Buildable newbuildable = new Buildable();
 
+
         switch (s){
             case "Colony Ship":
                 newbuildable = buildShip("colony",e);
@@ -34,6 +35,7 @@ public class BuildableDictionary {
         newShip.setMorale(100);
         switch(s){
             case "colony":
+                newShip.setBuildableType(BuildType.SHIP);
                 newShip.setName("Colony Ship");
                 newShip.setProductionCost(80);
                 newShip.setShipClass(ShipClass.COLONISATION);
@@ -45,6 +47,7 @@ public class BuildableDictionary {
                 newShip.setMovement(2);
                 break;
             case "light":
+                newShip.setBuildableType(BuildType.SHIP);
                 newShip.setName("Light Ship");
                 newShip.setProductionCost(45);
                 newShip.setShipClass(ShipClass.FRIGATE);
@@ -58,6 +61,7 @@ public class BuildableDictionary {
                 newShip.setXp(0);
                 break;
             case "heavy":
+                newShip.setBuildableType(BuildType.SHIP);
                 newShip.setName("Heavy Ship");
                 newShip.setProductionCost(150);
                 newShip.setShipClass(ShipClass.BATTLESHIP);

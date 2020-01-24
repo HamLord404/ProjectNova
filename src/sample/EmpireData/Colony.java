@@ -1,5 +1,6 @@
 package sample.EmpireData;
 
+import javafx.scene.layout.Pane;
 import sample.Dictionaries.BuildableDictionary;
 import sample.Enums.BuildType;
 import sample.Enums.Effect;
@@ -40,7 +41,7 @@ public class Colony {
         }
     }
 
-    public void turnTick(Empire e){
+    public void turnTick(Empire e, Pane root){
         double food = 0;
         double production = 0;
         double science = 0;
@@ -89,20 +90,21 @@ public class Colony {
 
         e.setInfluence(e.getInfluence()+influence);
 
-
+        System.out.println("production progress: " + productionProgress);
         if(productionProgress >= currentConstruction.getProductionCost()){
             productionProgress = 0;
-            finishProduction(e);
+            finishProduction(e,root);
         }
 
     }
 
-    public void finishProduction(Empire e){
+    public void finishProduction(Empire e,Pane root){
         if(currentConstruction.getBuildableType() == BuildType.SHIP){
             ArrayList<Ship> ships = new ArrayList<>();
             ships.add((Ship)currentConstruction);
-            //Fleet newFleet = new Fleet(e,x,y,ships);
-            //e.getFleets().add(newFleet);
+            Fleet newFleet = new Fleet(e,x,y,ships,root);
+            e.getFleets().add(newFleet);
+            System.out.println("ship Built");
         }
     }
 
