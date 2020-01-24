@@ -100,4 +100,12 @@ public class Fleet {
     public void setShips(ArrayList<Ship> ships) {
         this.ships = ships;
     }
+
+    public ImageView getSprite() {
+        return sprite;
+    }
+
+    public void setSprite(ImageView sprite) {
+        this.sprite = sprite;
+    }
 }

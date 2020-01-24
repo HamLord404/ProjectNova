@@ -34,6 +34,19 @@ public class BuildableDictionary {
         Ship newShip = new Ship();
         newShip.setMorale(100);
         switch(s){
+            case "exploration":
+                newShip.setBuildableType(BuildType.SHIP);
+                newShip.setName("Exploration Ship");
+                newShip.setProductionCost(80);
+                newShip.setShipClass(ShipClass.EXPLORATION);
+                newShip.setHp(10);
+                newShip.setArmour(5 * e.searchForModifier(Effect.SHIP_ARMOUR));
+                newShip.setAgility(3);
+                newShip.setShields(1);
+                newShip.setWeapons(1 * e.searchForModifier(Effect.SHIP_WEAPONS));
+                newShip.setCombatStrength(2);
+                newShip.setMovement(4);
+                break;
             case "colony":
                 newShip.setBuildableType(BuildType.SHIP);
                 newShip.setName("Colony Ship");
@@ -44,6 +57,7 @@ public class BuildableDictionary {
                 newShip.setAgility(3);
                 newShip.setShields(1);
                 newShip.setWeapons(1 * e.searchForModifier(Effect.SHIP_WEAPONS));
+                newShip.setCombatStrength(2);
                 newShip.setMovement(2);
                 break;
             case "light":
@@ -58,6 +72,7 @@ public class BuildableDictionary {
                 newShip.setWeapons(8 * e.searchForModifier(Effect.SHIP_WEAPONS));
                 newShip.setMovement(3);
                 newShip.setLevel((int)e.searchForModifier(Effect.MILITARY_UNIT_LEVEL));
+                newShip.setCombatStrength(6);
                 newShip.setXp(0);
                 break;
             case "heavy":
@@ -72,6 +87,7 @@ public class BuildableDictionary {
                 newShip.setWeapons(15 * e.searchForModifier(Effect.SHIP_WEAPONS));
                 newShip.setMovement(2);
                 newShip.setLevel((int)e.searchForModifier(Effect.MILITARY_UNIT_LEVEL));
+                newShip.setCombatStrength(10);
                 newShip.setXp(0);
                 break;
         }

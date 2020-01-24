@@ -16,10 +16,19 @@ public class Ship extends Buildable{
     private double xp;
     private int level;
     private Ship target;
+    private double combatStrength;
 
 
     public Ship(){
 
+    }
+
+    public double getCombatStrength() {
+        return combatStrength;
+    }
+
+    public void setCombatStrength(double combatStrength) {
+        this.combatStrength = combatStrength;
     }
 
     public int getMovement() {

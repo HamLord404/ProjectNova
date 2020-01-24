@@ -70,6 +70,7 @@ public class GalaxyScreen {
         });
 
 
+
         root.getChildren().add(topBar);
         root.getChildren().add(GC);
         root.getChildren().add(sci);
@@ -106,6 +107,10 @@ public class GalaxyScreen {
             }
         }
 
+        for(Fleet f : empire.getFleets()){
+            f.getSprite().setOnMouseClicked(this::selectFleet);
+        }
+
 
     }
 
@@ -134,6 +139,19 @@ public class GalaxyScreen {
         influenceCount.setText(e.getInfluence() + "");
         influenceCount.setFont(new Font("OCR A Extended", 12));
         influenceCount.setTextFill(Color.DARKMAGENTA);
+    }
+
+    public void selectFleet(MouseEvent event){
+        Fleet selectedFleet = null;
+        for(Fleet f : empire.getFleets()){
+            if(f.getSprite() == event.getSource()){
+                selectedFleet = f;
+            }
+        }
+
+        
+
+
     }
 
     public void SelectHex(MouseEvent event){
