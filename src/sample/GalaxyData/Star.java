@@ -45,7 +45,7 @@ public class Star {
 
     public void generatePlanet(){
         Random r = new Random();
-        int numPlanet = r.nextInt(5);
+        int numPlanet = r.nextInt(4) + 1;
         for(int i = 0; i < numPlanet; i++){
             planets.add(Planet.generatePlanet());
         }

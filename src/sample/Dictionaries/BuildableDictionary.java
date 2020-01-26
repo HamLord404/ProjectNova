@@ -16,6 +16,9 @@ public class BuildableDictionary {
 
 
         switch (s){
+            case "Explorer Ship":
+                newbuildable = buildShip("exploration",e);
+                break;
             case "Colony Ship":
                 newbuildable = buildShip("colony",e);
                 break;
@@ -25,6 +28,8 @@ public class BuildableDictionary {
             case "Heavy Ship":
                 newbuildable = buildShip("heavy",e);
                 break;
+
+
         }
 
         return newbuildable;
@@ -36,8 +41,8 @@ public class BuildableDictionary {
         switch(s){
             case "exploration":
                 newShip.setBuildableType(BuildType.SHIP);
-                newShip.setName("Exploration Ship");
-                newShip.setProductionCost(80);
+                newShip.setName("Explorer Ship");
+                newShip.setProductionCost(25);
                 newShip.setShipClass(ShipClass.EXPLORATION);
                 newShip.setHp(10);
                 newShip.setArmour(5 * e.searchForModifier(Effect.SHIP_ARMOUR));
