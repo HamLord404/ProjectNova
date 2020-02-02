@@ -44,7 +44,7 @@ public class GalaxyScreen {
     Button tech = new Button("Technology",root,690,600);
     Button government = new Button("Government",root,580,600);
 
-    ImageView topBar = new ImageView("TopBar.png");
+    ImageView topBar = new ImageView("ui_8.png");
     ImageView GC = new ImageView("GC.png");
     Label creditCount = new Label();
     ImageView sci = new ImageView("SCI.png");
@@ -69,7 +69,10 @@ public class GalaxyScreen {
             }
         });
 
-
+        topBar.setScaleX(0.33);
+        topBar.setScaleY(0.33);
+        topBar.setTranslateX(-(topBar.getImage().getWidth()/3) -10);
+        topBar.setTranslateY(-(topBar.getImage().getHeight()/3));
 
         root.getChildren().add(topBar);
         root.getChildren().add(GC);
