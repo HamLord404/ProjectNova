@@ -7,6 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
+import sample.Util.Scaler;
 
 import java.util.ArrayList;
 
@@ -39,27 +40,30 @@ public class Button {
     }
 
     public void correctSize(Pane root, int posX,int posY){
-        ImageView temp = new ImageView("ButtonFront.png");
+
+        ImageView temp = new ImageView("ui_1.png");
         segments.add(temp);
         temp.setTranslateX(posX);
         temp.setTranslateY(posY);
+        Scaler.ScaleImage(temp,0.33,posX,posY);
 
 
         int middleSegments = (int)(label.getText().length() * 0.8);
         for(int i = 0; i < middleSegments; i++){
-            temp = new ImageView("ButtonMiddle.png");
+            temp = new ImageView("ui_2.png");
             segments.add(temp);
             temp.setTranslateX(posX + ((i+1) * temp.getImage().getWidth()));
             temp.setTranslateY(posY);
+            Scaler.ScaleImage(temp,0.33,posX + ((i+1) * (temp.getImage().getWidth() * 0.33)),posY);
         }
 
-        temp = new ImageView("ButtonBack.png");
+        temp = new ImageView("ui_3.png");
         segments.add(temp);
         temp.setTranslateX(posX + ((middleSegments+1) * temp.getImage().getWidth()));
         temp.setTranslateY(posY);
+        Scaler.ScaleImage(temp,0.33,posX + ((middleSegments+1) * (temp.getImage().getWidth() * 0.33) ),posY);
 
         for(int i = 0; i < segments.size(); i++){
-            //root.getChildren().add(segments.get(i));
             segmentGroup.getChildren().add(segments.get(i));
         }
         root.getChildren().add(segmentGroup);
