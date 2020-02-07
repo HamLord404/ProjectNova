@@ -9,12 +9,13 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
 import sample.Dictionaries.TraitDictionary;
 import sample.Enums.TraitEnum;
+import sample.Util.Scaler;
 
 import java.util.ArrayList;
 
 
 public class ToggleButton {
-    private ImageView sprite = new ImageView("UnclickedPick.png");
+    private ImageView sprite = new ImageView("ui_5.png");
     private ArrayList<ToggleButton> mutuallyExclusive = new ArrayList<>();
     private boolean active = false;
     private Label label = new Label();
@@ -25,6 +26,7 @@ public class ToggleButton {
     public ToggleButton(GridPane root,int row,int col){
         sprite.setOnMouseClicked(this::clickFeedback);
         root.add(sprite,row,col);
+
     }
     public ToggleButton(GridPane root,int row,int col,String text){
         sprite.setOnMouseClicked(this::clickFeedback);
@@ -47,9 +49,10 @@ public class ToggleButton {
         sprite.setTranslateX(row * sprite.getImage().getWidth());
         sprite.setTranslateY(col * sprite.getImage().getHeight());
 
+        Scaler.ScaleImage(sprite,0.2,(row * sprite.getImage().getWidth() * 0.2) - 105,(col * sprite.getImage().getHeight() * 0.2) - 20);
 
-        label.setTranslateX((row * sprite.getImage().getWidth())+ 42);
-        label.setTranslateY( (col * sprite.getImage().getHeight()) + 10);
+        label.setTranslateX((row * sprite.getImage().getWidth()*0.2)+ 42);
+        label.setTranslateY( (col * sprite.getImage().getHeight()*0.2) + 10);
         label.setFont(new Font("OCR A Extended", 12));
         label.setText(text);
     }
@@ -57,9 +60,9 @@ public class ToggleButton {
     public void clickFeedback(MouseEvent event){
         active = !active;
         if(active) {
-            sprite.setImage(new Image("clickedPick.png"));
+            sprite.setImage(new Image("ui_4.png"));
         } else {
-            sprite.setImage(new Image("UnclickedPick.png"));
+            sprite.setImage(new Image("ui_5.png"));
         }
 
 
