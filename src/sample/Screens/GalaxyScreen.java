@@ -1,8 +1,10 @@
 package sample.Screens;
 
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.effect.ColorAdjust;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -20,6 +22,7 @@ import sample.FileManaging.GameSaver;
 import sample.GalaxyData.Galaxy;
 import sample.GalaxyData.Hex;
 import sample.GalaxyData.Star;
+import sample.GalaxyData.StarType;
 import sample.UIElements.Button;
 
 
@@ -36,9 +39,12 @@ public class GalaxyScreen {
     int mapY = 18;
 
     Hex[][] grid = new Hex[mapX][mapY];
+    Group hexes = new Group();
     Pane root = new Pane();
     public Galaxy galaxy = new Galaxy(mapX,mapY,root);
     Scene galaxyScene = new Scene(root,1000,700);
+
+    ImageView background = new ImageView("space_bg.png");
 
     Button endTurn = new Button("End Turn",root,800,600);
     Button tech = new Button("Technology",root,640,600);
@@ -69,6 +75,9 @@ public class GalaxyScreen {
             }
         });
 
+        root.getChildren().add(background);
+        background.toBack();
+
         topBar.setScaleX(0.33);
         topBar.setScaleY(0.33);
         topBar.setTranslateX(-(topBar.getImage().getWidth()/3) -10);
@@ -94,11 +103,22 @@ public class GalaxyScreen {
 
                 grid[i][j] = new Hex(root,i,j);
                 grid[i][j].getSprite().setOnMouseClicked(this::SelectHex);
-                //grid[i][j].getSprite().setScaleX(0.25);
-               // grid[i][j].getSprite().setScaleY(0.25);
-                //grid[i][j].getSprite().setOpacity(0.8);
+                hexes.getChildren().add(grid[i][j].getSprite());
+                if(galaxy.getGrid()[i][j].getType() != StarType.NONE){
+                    grid[i][j].setStar(galaxy.getGrid()[i][j]);
+                }
+
+
             }
         }
+
+        //size grid
+        root.getChildren().add(hexes);
+        hexes.setScaleX(0.2);
+        hexes.setScaleY(0.2);
+        hexes.setTranslateX(-1700);
+        hexes.setTranslateY(-800);
+
     }
 
     public void updateHexGrid(){
@@ -106,6 +126,7 @@ public class GalaxyScreen {
         for(int i = 0; i < galaxy.getEmpires().size();i++){
             System.out.println(" territory size: " + galaxy.getEmpires().get(i).getTerritory().size());
             for(int j = 0; j < galaxy.getEmpires().get(i).getTerritory().size();j++){
+                grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getSprite().setImage(new Image("startilebasenewclaimed.png"));
                 grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getSprite().setEffect(galaxy.getEmpires().get(i).getMapColor());
             }
         }

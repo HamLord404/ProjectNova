@@ -27,10 +27,11 @@ public class Star {
     }
 
     public Star(Pane root,StarType type,int x,int y){
-        sprite.setImage(new Image("Star.png"));
-        root.getChildren().add(sprite);
+        sprite.setImage(new Image("tile_star.png"));
+        //root.getChildren().add(sprite);
         this.x = x;
         this.y = y;
+        this.type = type;
 
         if(y % 2 == 0) {
             sprite.setTranslateX( (1.5*x) * sprite.getImage().getWidth());

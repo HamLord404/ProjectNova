@@ -1,5 +1,6 @@
 package sample.GalaxyData;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -7,9 +8,10 @@ import javafx.scene.layout.Pane;
 
 
 public class Hex {
-    private ImageView sprite = new ImageView("Hex.png");
+    private ImageView sprite = new ImageView("tile_blank.png");
     private int x;
     private int y;
+    private Star star;
 
     public Hex(Pane root,int x, int y){
         root.getChildren().add(sprite);
@@ -28,6 +30,19 @@ public class Hex {
 
         this.x = x;
         this.y = y;
+    }
+
+    public Star getStar() {
+        return star;
+    }
+
+    public void setStar(Star star) {
+        this.star = star;
+        if(star.getType() != StarType.NONE){
+            sprite.setImage(new Image("startilenew.png"));
+        } else{
+            sprite.setImage(new Image("tile_blank.png"));
+        }
     }
 
     public void temp(MouseEvent event){

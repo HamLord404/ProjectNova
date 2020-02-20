@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/GalaxyData/Hex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GalaxyData/Hex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/GalaxyData/Star.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/GalaxyData/Star.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Screens/GalaxyScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Screens/GalaxyScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Screens/HomeWorldChoosingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Screens/HomeWorldChoosingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/UIElements/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/UIElements/Button.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/UIElements/LabelBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/UIElements/LabelBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile_base_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile_base_1.png" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,10 +68,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Screens/GovernmentCreationScreen.java">
+        <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+            <state relative-caret-position="287">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+              <folding>
+                <element signature="method#spawnEmpire#0;class#Galaxy#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,17 +97,53 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Screens/GalaxyScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="82">
+              <caret line="128" column="193" selection-start-line="128" selection-start-column="193" selection-end-line="128" selection-end-column="193" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#loadTopBarData#0;class#GalaxyScreen#0" />
                 <element signature="method#selectFleet#0;class#GalaxyScreen#0" />
-                <element signature="method#SelectHex#0;class#GalaxyScreen#0" />
                 <element signature="method#processHotkey#0;class#GalaxyScreen#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Star.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Hex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-340">
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#887#888#0" expanded="true" />
+                <element signature="e#914#915#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="78" column="28" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="e#2307#2308#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -124,32 +162,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Buildable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -159,18 +176,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
               <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/UIElements/SmallButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -207,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/sample/Enums/LeaderType.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/TextEntry.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/Panel.java" />
-        <option value="$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java" />
         <option value="$PROJECT_DIR$/src/sample/Screens/GovernmentCreationScreen.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/Tooltip.java" />
         <option value="$PROJECT_DIR$/src/sample/Enums/TraitEnum.java" />
@@ -237,10 +241,8 @@
         <option value="$PROJECT_DIR$/src/sample/Screens/ColonisationScreen.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/SmallButton.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Pop.java" />
-        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Colony.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Ship.java" />
-        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Star.java" />
         <option value="$PROJECT_DIR$/src/sample/Screens/ColonyScreen.java" />
         <option value="$PROJECT_DIR$/src/sample/Dictionaries/BuildableDictionary.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Fleet.java" />
@@ -248,11 +250,14 @@
         <option value="$PROJECT_DIR$/src/sample/Util/Scaler.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/ToggleButton.java" />
         <option value="$PROJECT_DIR$/src/sample/EmpireData/Empire.java" />
-        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Hex.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/LabelBackground.java" />
         <option value="$PROJECT_DIR$/src/sample/UIElements/Button.java" />
         <option value="$PROJECT_DIR$/src/sample/Screens/HomeWorldChoosingScreen.java" />
+        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Star.java" />
+        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Hex.java" />
+        <option value="$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java" />
         <option value="$PROJECT_DIR$/src/sample/Screens/GalaxyScreen.java" />
+        <option value="$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java" />
       </list>
     </option>
   </component>
@@ -296,21 +301,7 @@
               <item name="ProjectNova" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="Dictionaries" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectNova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectNova" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="EmpireData" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjectNova" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjectNova" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="Enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectNova" type="b2602c69:ProjectViewProjectNode" />
@@ -713,16 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Hex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tile_star.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -779,23 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Star.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
-          <folding>
-            <element signature="method#createGalaxy#0;class#Galaxy#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Screens/PasswordCreationScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -814,16 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -869,24 +823,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Star.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="202">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Galaxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="method#spawnEmpire#0;class#Galaxy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EmpireData/Empire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="78" column="28" lean-forward="true" selection-start-line="78" selection-start-column="28" selection-end-line="78" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="e#2307#2308#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GalaxyData/Hex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-340">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Screens/GalaxyScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        <state relative-caret-position="82">
+          <caret line="128" column="193" selection-start-line="128" selection-start-column="193" selection-end-line="128" selection-end-column="193" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#loadTopBarData#0;class#GalaxyScreen#0" />
             <element signature="method#selectFleet#0;class#GalaxyScreen#0" />
-            <element signature="method#SelectHex#0;class#GalaxyScreen#0" />
             <element signature="method#processHotkey#0;class#GalaxyScreen#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Screens/ColorChoosingScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
         </state>
       </provider>
     </entry>

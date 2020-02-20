@@ -22,7 +22,7 @@ import sample.UIElements.Button;
 public class ColorChoosingScreen {
     Slider hue = new Slider();
     Slider saturation = new Slider();
-    ImageView example = new ImageView("Hex.png");
+    ImageView example = new ImageView("startilebasenewclaimed.png");
     GridPane root = new GridPane();
     Label hueLabel = new Label("Hue");
     Label satLabel = new Label("Saturation");
@@ -52,6 +52,9 @@ public class ColorChoosingScreen {
         saturation.setMax(1.0);
         saturation.setMin(0);
         saturation.setValue(1);
+
+        example.setScaleX(0.2);
+        example.setScaleY(0.2);
 
 
         next.getSprite().setOnMouseClicked(this::finishColor);

@@ -34,7 +34,7 @@ public class Galaxy {
 
                 Random r = new Random();
 
-                if(r.nextInt(100) >= 67){
+                if(r.nextInt(100) >= 80){
                     grid[i][j] = new Star(root,StarType.NORMAL,i,j);
                     stars.add(grid[i][j]);
                 } else {
