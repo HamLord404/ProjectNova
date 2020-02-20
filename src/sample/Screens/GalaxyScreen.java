@@ -102,8 +102,10 @@ public class GalaxyScreen {
             for(int j = 0; j < mapY; j++){
 
                 grid[i][j] = new Hex(root,i,j);
-                grid[i][j].getSprite().setOnMouseClicked(this::SelectHex);
+                //grid[i][j].getSprite().setOnMouseClicked(this::SelectHex);
+                grid[i][j].getAdjust().setOnMouseClicked(this::SelectHex);
                 hexes.getChildren().add(grid[i][j].getSprite());
+                hexes.getChildren().add(grid[i][j].getAdjust());
                 if(galaxy.getGrid()[i][j].getType() != StarType.NONE){
                     grid[i][j].setStar(galaxy.getGrid()[i][j]);
                 }
@@ -127,7 +129,7 @@ public class GalaxyScreen {
             System.out.println(" territory size: " + galaxy.getEmpires().get(i).getTerritory().size());
             for(int j = 0; j < galaxy.getEmpires().get(i).getTerritory().size();j++){
                 grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getSprite().setImage(new Image("startilebasenewclaimed.png"));
-                grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getSprite().setEffect(galaxy.getEmpires().get(i).getMapColor());
+                grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getAdjust().setEffect(galaxy.getEmpires().get(i).getMapColor());
             }
         }
 
@@ -186,7 +188,7 @@ public class GalaxyScreen {
         for(int i = 0; i < mapX; i++){
             for(int j = 0; j < mapY; j++){
 
-                if(grid[i][j].getSprite() == event.getSource()){
+                if(grid[i][j].getAdjust() == event.getSource()){
                     src = grid[i][j];
                     x = i;
                     y = j;

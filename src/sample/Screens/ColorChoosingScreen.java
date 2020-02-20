@@ -7,6 +7,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
+import javafx.scene.effect.BlendMode;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
@@ -25,6 +26,7 @@ public class ColorChoosingScreen {
     Slider brightness = new Slider();
     Slider contrast = new Slider();
     ImageView example = new ImageView("startilebasenewclaimed.png");
+    ImageView AdjustLayer = new ImageView("adjustmentlayer.png");
     GridPane root = new GridPane();
     Label hueLabel = new Label("Hue");
     Label satLabel = new Label("Saturation");
@@ -50,6 +52,7 @@ public class ColorChoosingScreen {
         root.add(contrast,0,3);
         root.add(conLabel,1,3);
         root.add(example,0,4);
+        root.add(AdjustLayer,0,4);
 
         homeworld = p;
         primaryStage = s;
@@ -70,6 +73,10 @@ public class ColorChoosingScreen {
 
         example.setScaleX(0.2);
         example.setScaleY(0.2);
+        AdjustLayer.setScaleX(0.2);
+        AdjustLayer.setScaleY(0.2);
+
+
 
 
         next.getSprite().setOnMouseClicked(this::finishColor);
@@ -91,8 +98,8 @@ public class ColorChoosingScreen {
                 color.setBrightness(brightness.getValue());
 
 
-
-                example.setEffect(color);
+                AdjustLayer.setBlendMode(BlendMode.OVERLAY);
+                AdjustLayer.setEffect(color);
             }
         }));
 

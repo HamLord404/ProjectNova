@@ -1,5 +1,6 @@
 package sample.GalaxyData;
 
+import javafx.scene.effect.BlendMode;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -9,21 +10,28 @@ import javafx.scene.layout.Pane;
 
 public class Hex {
     private ImageView sprite = new ImageView("tile_blank.png");
+    private ImageView adjust = new ImageView("adjustmentlayer.png");
     private int x;
     private int y;
     private Star star;
 
     public Hex(Pane root,int x, int y){
         root.getChildren().add(sprite);
-
-
+        root.getChildren().add(adjust);
+        adjust.setBlendMode(BlendMode.OVERLAY);
 
         if(y % 2 == 0) {
             sprite.setTranslateX( (1.5*x) * sprite.getImage().getWidth());
             sprite.setTranslateY((y * (sprite.getImage().getHeight()/2))+35);
+
+            adjust.setTranslateX( (1.5*x) * adjust.getImage().getWidth());
+            adjust.setTranslateY((y * (adjust.getImage().getHeight()/2))+35);
         } else {
             sprite.setTranslateX( (1.5*x) * sprite.getImage().getWidth() + (sprite.getImage().getWidth()*0.75));
             sprite.setTranslateY((y * (sprite.getImage().getHeight()/2))+35);
+
+            adjust.setTranslateX( (1.5*x) * adjust.getImage().getWidth() + (adjust.getImage().getWidth()*0.75));
+            adjust.setTranslateY((y * (adjust.getImage().getHeight()/2))+35);
         }
 
         //sprite.setOnMouseEntered(this::temp);
@@ -48,6 +56,14 @@ public class Hex {
 
     public void temp(MouseEvent event){
         System.out.println("x: " + x + " y: " + y);
+    }
+
+    public ImageView getAdjust() {
+        return adjust;
+    }
+
+    public void setAdjust(ImageView adjust) {
+        this.adjust = adjust;
     }
 
     public ImageView getSprite() {
