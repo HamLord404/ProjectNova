@@ -41,7 +41,24 @@ public class LabelBackground {
         label.setText(text);
 
         sprite.setScaleX((text.length()/10) + 1);
+    }
 
+    public LabelBackground(String text, Pane root, double row, double col){
+
+        root.getChildren().add(sprite);
+        root.getChildren().add(label);
+
+        sprite.setTranslateX(row );
+        sprite.setTranslateY(col );
+
+        label.setTranslateX(row  + 10);
+        label.setTranslateY(col  + 10);
+
+
+        label.setFont(new Font("OCR A Extended", 12));
+        label.setText(text);
+
+        sprite.setScaleX((text.length()/10) + 1);
     }
 
     public ImageView getSprite() {

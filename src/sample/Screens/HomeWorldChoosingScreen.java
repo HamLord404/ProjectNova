@@ -4,6 +4,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import sample.EmpireData.Empire;
 import sample.Enums.*;
@@ -15,12 +16,12 @@ import sample.UIElements.ToggleButton;
 import java.util.ArrayList;
 
 public class HomeWorldChoosingScreen {
-    GridPane root = new GridPane();
+    Pane root = new Pane();
     LabelBackground homeworldBiome = new LabelBackground("Homeworld Biome",root,0,0);
     ArrayList<ToggleButton> biomePicker = new ArrayList<>();
-    LabelBackground homeworldTempurature = new LabelBackground("Tempurature",root,0,3);
+    LabelBackground homeworldTempurature = new LabelBackground("Tempurature",root,0.0,110.0);
     ArrayList<ToggleButton> gravityPicker = new ArrayList<>();
-    LabelBackground homeworldGravity = new LabelBackground("Gravity",root,0,5);
+    LabelBackground homeworldGravity = new LabelBackground("Gravity",root,0.0,165.0);
     ArrayList<ToggleButton> tempuraturePicker = new ArrayList<>();
     TextField homeworldName = new TextField();
     Scene homeWorldScene = new Scene(root,1000,500);
@@ -53,7 +54,7 @@ public class HomeWorldChoosingScreen {
         }
 
         for(int i = 0; i < Temperature.values().length; i++){
-            ToggleButton temp = new ToggleButton(root,i,4, Temperature.values()[i].toString());
+            ToggleButton temp = new ToggleButton(root,i,5, Temperature.values()[i].toString());
             temp.getSprite().setOnMouseClicked(this::handleTempuratureMutualExclusive);
             temp.getLabel().setOnMouseClicked(this::handleTempuratureMutualExclusive);
             tempuraturePicker.add(temp);
@@ -65,7 +66,7 @@ public class HomeWorldChoosingScreen {
 
 
         for(int i = 0; i < Gravity.values().length; i++){
-            ToggleButton temp = new ToggleButton(root,i,6, Gravity.values()[i].toString());
+            ToggleButton temp = new ToggleButton(root,i,7, Gravity.values()[i].toString());
             temp.getSprite().setOnMouseClicked(this::handleGravityMutualExclusive);
             temp.getLabel().setOnMouseClicked(this::handleGravityMutualExclusive);
             gravityPicker.add(temp);
@@ -76,11 +77,16 @@ public class HomeWorldChoosingScreen {
 
 
 
-        next.getSprite().setOnMouseClicked(this::finishHomeworld);
+        next.getSegmentGroup().setOnMouseClicked(this::finishHomeworld);
         next.getLabel().setOnMouseClicked(this::finishHomeworld);
 
 
-        root.add(homeworldName,0,7);
+        root.getChildren().add(homeworldName);
+        homeworldName.setTranslateX(0);
+        homeworldName.setTranslateY(300);
+
+        next.setXPos(400);
+        next.setYPos(400);
 
         primaryStage = s;
         this.e = e;
@@ -134,23 +140,7 @@ public class HomeWorldChoosingScreen {
         }
     }
 
-    /*
-    public void finishHomeworld(MouseEvent event){
-        System.out.println("Homeworld Created");
-        GalaxyScreen x = new GalaxyScreen();
 
-        p = Planet.generatePlanet();
-        p.setBiome(biome);
-        p.setGrav(gravity);
-        p.setTemp(temperature);
-        p.setName(homeworldName.getText());
-
-        x.galaxy.spawnEmpire(e,p);
-        x.updateHexGrid();
-        x.loadTopBarData(e);
-        primaryStage.setScene(x.galaxyScene);
-    }
-     */
 
     public void finishHomeworld(MouseEvent event){
         System.out.println("Homeworld Created");

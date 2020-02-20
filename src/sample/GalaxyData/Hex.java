@@ -25,6 +25,7 @@ public class Hex {
 
         //sprite.setOnMouseEntered(this::temp);
 
+
         this.x = x;
         this.y = y;
     }

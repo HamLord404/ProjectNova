@@ -41,8 +41,8 @@ public class GalaxyScreen {
     Scene galaxyScene = new Scene(root,1000,700);
 
     Button endTurn = new Button("End Turn",root,800,600);
-    Button tech = new Button("Technology",root,690,600);
-    Button government = new Button("Government",root,580,600);
+    Button tech = new Button("Technology",root,640,600);
+    Button government = new Button("Government",root,480,600);
 
     ImageView topBar = new ImageView("ui_8.png");
     ImageView GC = new ImageView("GC.png");

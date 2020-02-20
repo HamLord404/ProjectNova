@@ -1,7 +1,9 @@
 package sample.EmpireData;
 
 import javafx.scene.effect.ColorAdjust;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import sample.Enums.Effect;
 import sample.Enums.GovernmentType;
 import sample.GalaxyData.Planet;
@@ -32,6 +34,7 @@ public class Empire {
         name = n;
         government = gov;
         founders = f;
+
 
         mapColor.setHue(0.5);
         mapColor.setSaturation(1);

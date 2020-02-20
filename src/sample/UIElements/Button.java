@@ -39,6 +39,17 @@ public class Button {
         label.setTranslateY(posY + 12);
     }
 
+    public void setXPos(double x){
+        segmentGroup.setTranslateX(x);
+        label.setTranslateX(x + 10);
+    }
+
+    public void setYPos(double y){
+        segmentGroup.setTranslateY(y);
+        label.setTranslateY(y + 20);
+    }
+
+
     public void correctSize(Pane root, int posX,int posY){
 
         ImageView temp = new ImageView("ui_1.png");
