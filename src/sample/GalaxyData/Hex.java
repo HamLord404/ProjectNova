@@ -17,6 +17,7 @@ public class Hex {
         root.getChildren().add(sprite);
 
 
+
         if(y % 2 == 0) {
             sprite.setTranslateX( (1.5*x) * sprite.getImage().getWidth());
             sprite.setTranslateY((y * (sprite.getImage().getHeight()/2))+35);

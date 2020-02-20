@@ -22,11 +22,15 @@ import sample.UIElements.Button;
 public class ColorChoosingScreen {
     Slider hue = new Slider();
     Slider saturation = new Slider();
+    Slider brightness = new Slider();
+    Slider contrast = new Slider();
     ImageView example = new ImageView("startilebasenewclaimed.png");
     GridPane root = new GridPane();
     Label hueLabel = new Label("Hue");
     Label satLabel = new Label("Saturation");
-    Button next = new Button("Next",root,2,3);
+    Label briLabel = new Label("Brightness");
+    Label conLabel = new Label("Contrast");
+    Button next = new Button("Next",root,2,4);
 
     ColorAdjust color = new ColorAdjust();
 
@@ -41,7 +45,12 @@ public class ColorChoosingScreen {
         root.add(hueLabel,1,0);
         root.add(saturation,0,1);
         root.add(satLabel,1,1);
-        root.add(example,0,3);
+        root.add(brightness,0,2);
+        root.add(briLabel,1,2);
+        root.add(contrast,0,3);
+        root.add(conLabel,1,3);
+        root.add(example,0,4);
+
         homeworld = p;
         primaryStage = s;
         empire = e;
@@ -52,6 +61,12 @@ public class ColorChoosingScreen {
         saturation.setMax(1.0);
         saturation.setMin(0);
         saturation.setValue(1);
+        brightness.setMax(1.0);
+        brightness.setMin(0.0);
+        contrast.setMax(1.0);
+        contrast.setMin(0.0);
+        contrast.setValue(0.5);
+
 
         example.setScaleX(0.2);
         example.setScaleY(0.2);
@@ -69,8 +84,13 @@ public class ColorChoosingScreen {
             public void handle(ActionEvent event) {
                 //color = new ColorAdjust();
                 System.out.println(hue.getValue());
+
+                color.setContrast(contrast.getValue());
                 color.setHue(hue.getValue());
                 color.setSaturation(saturation.getValue());
+                color.setBrightness(brightness.getValue());
+
+
 
                 example.setEffect(color);
             }

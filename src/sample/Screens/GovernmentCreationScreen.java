@@ -186,7 +186,9 @@ public class GovernmentCreationScreen {
                 "\n" +
                 "Gameplay Effect:\n" +
                 "Elections every 20 turns\n" +
-                "";
+                "\nGain a unique bonus whenever a\n" +
+                "Idea Tree is fully adopted";
+
         Tooltip oligarchyTip = new Tooltip(temp2,tempText,root);
 
         Node[] temp3 = {monarchy.getSprite(),monarchy.getLabel()};
