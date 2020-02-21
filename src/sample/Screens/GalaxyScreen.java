@@ -99,19 +99,41 @@ public class GalaxyScreen {
 
 
     public void generateHexGrid(){
+        background.setScaleX(5);
+        background.setScaleY(5);
+        hexes.getChildren().add(background);
+
         for(int i = 0; i < mapX; i++){
             for(int j = 0; j < mapY; j++){
 
                 grid[i][j] = new Hex(root,i,j);
                 //grid[i][j].getSprite().setOnMouseClicked(this::SelectHex);
                 grid[i][j].getAdjust().setOnMouseClicked(this::SelectHex);
+                grid[i][j].getAdjust().setOnMouseEntered(this::MouseOver);
+                grid[i][j].getAdjust().setOnMouseExited(this::MouseOff);
+                grid[i][j].getTileHover().setOnMouseEntered(this::MouseOver);
+                grid[i][j].getTileHover().setOnMouseExited(this::MouseOff);
                 hexes.getChildren().add(grid[i][j].getSprite());
                 hexes.getChildren().add(grid[i][j].getAdjust());
                 hexes.getChildren().add(grid[i][j].getSanityTest());
+                hexes.getChildren().add(grid[i][j].getTileHover());
+                grid[i][j].getTileHover().toFront();
+
+
                 if(galaxy.getGrid()[i][j].getType() != StarType.NONE){
                     grid[i][j].setStar(galaxy.getGrid()[i][j]);
                 }
 
+
+            }
+        }
+
+
+        for(int i = 0; i < mapX; i++){
+            for(int j = 0; j < mapY; j++){
+
+
+                grid[i][j].getTileHover().toFront();
 
             }
         }
@@ -122,6 +144,8 @@ public class GalaxyScreen {
         hexes.setScaleY(0.2);
         hexes.setTranslateX(-1700);
         hexes.setTranslateY(-800);
+        
+
 
     }
 
@@ -240,7 +264,30 @@ public class GalaxyScreen {
 
     }
 
+    public void MouseOver(MouseEvent event){
+        for(int i = 0; i < mapX; i++){
+            for(int j = 0; j < mapY; j++){
+                if(event.getSource() == grid[i][j].getAdjust() || event.getSource() == grid[i][j].getTileHover()){
+                    grid[i][j].getTileHover().setVisible(true);
+                }
+            }
+        }
 
+
+    }
+
+    public void MouseOff(MouseEvent event){
+        for(int i = 0; i < mapX; i++){
+            for(int j = 0; j < mapY; j++){
+                if(event.getSource() == grid[i][j].getAdjust() || event.getSource() == grid[i][j].getTileHover()){
+                    grid[i][j].getTileHover().setVisible(false);
+
+                }
+            }
+        }
+
+
+    }
 
     public void processHotkey(KeyEvent event) throws IOException {
         if(event.getCode() == KeyCode.S){

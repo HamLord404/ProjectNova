@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 public class Hex {
     private ImageView sprite = new ImageView("tile_blank.png");
     private ImageView adjust = new ImageView("adjustmentlayer.png");
+    private ImageView tileHover = new ImageView("select.png");
     private Label sanityTest = new Label("");
     private int x;
     private int y;
@@ -21,7 +22,9 @@ public class Hex {
         root.getChildren().add(sprite);
         root.getChildren().add(adjust);
         root.getChildren().add(sanityTest);
+        root.getChildren().add(tileHover);
         adjust.setBlendMode(BlendMode.OVERLAY);
+        tileHover.setVisible(false);
 
 
         // looks right but has screwed up coordinates
@@ -33,6 +36,9 @@ public class Hex {
             adjust.setTranslateX( (1.5*x) * adjust.getImage().getWidth());
             adjust.setTranslateY((y * (adjust.getImage().getHeight()/2))+35);
 
+            tileHover.setTranslateX( (1.5*x) * adjust.getImage().getWidth());
+            tileHover.setTranslateY((y * (adjust.getImage().getHeight()/2))+35);
+
             sanityTest.setTranslateX( (1.5*x) * adjust.getImage().getWidth()+35);
             sanityTest.setTranslateY((y * (adjust.getImage().getHeight()/2))+65);
         } else {
@@ -41,6 +47,9 @@ public class Hex {
 
             adjust.setTranslateX( (1.5*x) * adjust.getImage().getWidth() + (adjust.getImage().getWidth()*0.75));
             adjust.setTranslateY((y * (adjust.getImage().getHeight()/2))+35);
+
+            tileHover.setTranslateX( (1.5*x) * adjust.getImage().getWidth() + (adjust.getImage().getWidth()*0.75));
+            tileHover.setTranslateY((y * (adjust.getImage().getHeight()/2))+35);
 
             sanityTest.setTranslateX( (1.5*x) * adjust.getImage().getWidth() + (adjust.getImage().getWidth()*0.75)+35);
             sanityTest.setTranslateY((y * (adjust.getImage().getHeight()/2))+65);
@@ -52,27 +61,7 @@ public class Hex {
         sanityTest.setScaleY(3);
 
 
-        /*
-        if(x % 2 != 0) {
-            sprite.setTranslateX( (1.5*x) * sprite.getImage().getWidth());
-            sprite.setTranslateY( y * sprite.getImage().getHeight());
 
-            adjust.setTranslateX((1.5*x) * sprite.getImage().getWidth());
-            adjust.setTranslateY(y * sprite.getImage().getHeight());
-
-            sanityTest.setTranslateX( (1.5*x) * sprite.getImage().getWidth() + 60);
-            sanityTest.setTranslateY(y * sprite.getImage().getHeight() + 65);
-        } else {
-            sprite.setTranslateX(x * sprite.getImage().getWidth());
-            sprite.setTranslateY(y * sprite.getImage().getHeight()/2);
-
-            adjust.setTranslateX(x * sprite.getImage().getWidth() );
-            adjust.setTranslateY(y * sprite.getImage().getHeight()/2);
-
-            sanityTest.setTranslateX(x * sprite.getImage().getWidth() + 60);
-            sanityTest.setTranslateY(y * sprite.getImage().getHeight()/2 +65);
-        }
-        */
 
 
         //sprite.setOnMouseEntered(this::temp);
@@ -169,6 +158,15 @@ public class Hex {
 
     public void temp(MouseEvent event){
         System.out.println("x: " + x + " y: " + y);
+    }
+
+
+    public ImageView getTileHover() {
+        return tileHover;
+    }
+
+    public void setTileHover(ImageView tileHover) {
+        this.tileHover = tileHover;
     }
 
     public Label getSanityTest() {
