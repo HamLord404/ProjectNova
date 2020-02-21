@@ -1,6 +1,7 @@
 package sample.EmpireData;
 
 import javafx.scene.effect.ColorAdjust;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -18,6 +19,7 @@ public class Empire {
     private ArrayList<Star> territory = new ArrayList<>();
     private ArrayList<Colony> colonies = new ArrayList<>();
     private ArrayList<Modifier> modifiers = new ArrayList<Modifier>();
+    private Image icon = new Image("faction_1.png");
     private PoliticalParty rulingParty;
     private ArrayList<PoliticalParty> parties = new ArrayList<>();
     private Technology currentResearch;
@@ -85,6 +87,14 @@ public class Empire {
         mapColor.setHue(hue);
         mapColor.setBrightness(brightness);
         mapColor.setSaturation(saturation);
+    }
+
+    public Image getIcon() {
+        return icon;
+    }
+
+    public void setIcon(Image icon) {
+        this.icon = icon;
     }
 
     public Technology getCurrentResearch() {

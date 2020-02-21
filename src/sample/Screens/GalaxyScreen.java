@@ -67,6 +67,7 @@ public class GalaxyScreen {
         this.empire = empire;
         generateHexGrid();
         updateHexGrid();
+
         galaxyScene.setOnKeyPressed(event -> {
             try {
                 processHotkey(event);
@@ -128,14 +129,25 @@ public class GalaxyScreen {
         System.out.println(" empire count: " + galaxy.getEmpires().size());
         for(int i = 0; i < galaxy.getEmpires().size();i++){
             System.out.println(" territory size: " + galaxy.getEmpires().get(i).getTerritory().size());
+            Empire currentEmpire = galaxy.getEmpires().get(i);
             for(int j = 0; j < galaxy.getEmpires().get(i).getTerritory().size();j++){
                 Star currentStar = galaxy.getEmpires().get(i).getTerritory().get(j);
+
                 String spriteChange = "tile_blank.png";
+
                 if(currentStar.getType() != StarType.NONE){
                     spriteChange = "startilebasenewclaimed.png";
-                } else {
+                }else{
                     spriteChange = "tile_base_1.png";
                 }
+
+                for(int c = 0; c < currentEmpire.getColonies().size(); c++){
+                    if(currentEmpire.getColonies().get(c).getX() == currentStar.getX() && currentEmpire.getColonies().get(c).getY() == currentStar.getY()){
+                        spriteChange = currentEmpire.getIcon().getUrl();
+                    }
+                }
+
+
 
 
                 grid[currentStar.getX()][currentStar.getY()].getSprite().setImage(new Image(spriteChange));
@@ -227,6 +239,8 @@ public class GalaxyScreen {
 
 
     }
+
+
 
     public void processHotkey(KeyEvent event) throws IOException {
         if(event.getCode() == KeyCode.S){
