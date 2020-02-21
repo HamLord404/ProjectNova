@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import sample.EmpireData.Empire;
 import sample.Enums.*;
 import sample.GalaxyData.Planet;
+import sample.UIElements.Background;
 import sample.UIElements.Button;
 import sample.UIElements.LabelBackground;
 import sample.UIElements.ToggleButton;
@@ -22,6 +23,7 @@ public class HomeWorldChoosingScreen {
     LabelBackground homeworldTempurature = new LabelBackground("Tempurature",root,0.0,110.0);
     ArrayList<ToggleButton> gravityPicker = new ArrayList<>();
     LabelBackground homeworldGravity = new LabelBackground("Gravity",root,0.0,165.0);
+    Background bg = new Background(root);
     ArrayList<ToggleButton> tempuraturePicker = new ArrayList<>();
     TextField homeworldName = new TextField();
     Scene homeWorldScene = new Scene(root,1000,500);

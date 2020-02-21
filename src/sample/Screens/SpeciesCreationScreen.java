@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -12,10 +13,7 @@ import javafx.stage.Stage;
 import sample.EmpireData.Species;
 import sample.Dictionaries.TraitDictionary;
 import sample.Enums.TraitEnum;
-import sample.UIElements.Button;
-import sample.UIElements.LabelBackground;
-import sample.UIElements.ToggleButton;
-import sample.UIElements.Tooltip;
+import sample.UIElements.*;
 
 
 import java.util.ArrayList;
@@ -26,6 +24,8 @@ public class SpeciesCreationScreen {
     Scene speciesCreationScene = new Scene(root,1000,500);
     Label title = new Label("10 picks left");
     int picks = 10;
+
+    Background bg = new Background(root);
 
     Species newSpecies = new Species();
     TextField speciesName = new TextField();

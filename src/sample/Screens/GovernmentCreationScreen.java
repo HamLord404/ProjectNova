@@ -16,10 +16,7 @@ import sample.Enums.Ideology;
 import sample.Enums.TraitEnum;
 import sample.GalaxyData.Galaxy;
 import sample.PoliticalParty;
-import sample.UIElements.Button;
-import sample.UIElements.LabelBackground;
-import sample.UIElements.ToggleButton;
-import sample.UIElements.Tooltip;
+import sample.UIElements.*;
 
 import java.util.ArrayList;
 
@@ -38,6 +35,8 @@ public class GovernmentCreationScreen {
 
     GovernmentType selectGov;
     Ideology selectIdeo;
+
+    Background bg = new Background(root);
 
     ToggleButton democracy = new ToggleButton(root,0,1,"Republic");
     ToggleButton oligarchy = new ToggleButton(root,1,1,"Oligarchy");

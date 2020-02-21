@@ -15,10 +15,12 @@ import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.EmpireData.Empire;
 import sample.GalaxyData.Planet;
+import sample.UIElements.Background;
 import sample.UIElements.Button;
 import sample.UIElements.TriangleButton;
 
@@ -27,9 +29,11 @@ public class ColorChoosingScreen {
     Slider hue = new Slider();
     Slider saturation = new Slider();
     Slider brightness = new Slider();
+
     ImageView example = new ImageView("faction_1.png");
     ImageView AdjustLayer = new ImageView("adjustmentlayer.png");
     Pane root = new Pane();
+    Background bg = new Background(root);
     Label hueLabel = new Label("Hue");
     Label satLabel = new Label("Saturation");
     Label briLabel = new Label("Brightness");
@@ -61,11 +65,13 @@ public class ColorChoosingScreen {
         hue.setTranslateY(20);
         hueLabel.setTranslateX(200);
         hueLabel.setTranslateY(20);
+        hueLabel.setTextFill(Color.WHITE);
 
         saturation.setTranslateX(20);
         saturation.setTranslateY(40);
         satLabel.setTranslateX(200);
         satLabel.setTranslateY(40);
+        satLabel.setTextFill(Color.WHITE);
 
         example.setTranslateX(-30);
         example.setTranslateY(10);
