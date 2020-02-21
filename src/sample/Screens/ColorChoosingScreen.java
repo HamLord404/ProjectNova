@@ -9,30 +9,37 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.effect.BlendMode;
 import javafx.scene.effect.ColorAdjust;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import sample.EmpireData.Empire;
 import sample.GalaxyData.Planet;
 import sample.UIElements.Button;
+import sample.UIElements.TriangleButton;
 
 
 public class ColorChoosingScreen {
     Slider hue = new Slider();
     Slider saturation = new Slider();
     Slider brightness = new Slider();
-    Slider contrast = new Slider();
-    ImageView example = new ImageView("startilebasenewclaimed.png");
+    ImageView example = new ImageView("faction_1.png");
     ImageView AdjustLayer = new ImageView("adjustmentlayer.png");
-    GridPane root = new GridPane();
+    Pane root = new Pane();
     Label hueLabel = new Label("Hue");
     Label satLabel = new Label("Saturation");
     Label briLabel = new Label("Brightness");
-    Label conLabel = new Label("Contrast");
-    Button next = new Button("Next",root,2,4);
+
+    String[] icons = {"faction_1.png","faction_2.png","faction_3.png","faction_4.png"};
+    int currentIconIndex = 0;
+
+    Button next = new Button("Next",root,300,100);
+    TriangleButton left = new TriangleButton(root,-20,42,false);
+    TriangleButton right = new TriangleButton(root,65,42,true);
 
     ColorAdjust color = new ColorAdjust();
 
@@ -43,16 +50,29 @@ public class ColorChoosingScreen {
     Timeline tick;
 
     public ColorChoosingScreen(Stage s, Empire e, Planet p){
-        root.add(hue,0,0);
-        root.add(hueLabel,1,0);
-        root.add(saturation,0,1);
-        root.add(satLabel,1,1);
-        root.add(brightness,0,2);
-        root.add(briLabel,1,2);
-        root.add(contrast,0,3);
-        root.add(conLabel,1,3);
-        root.add(example,0,4);
-        root.add(AdjustLayer,0,4);
+        root.getChildren().add(hue);
+        root.getChildren().add(hueLabel);
+        root.getChildren().add(saturation);
+        root.getChildren().add(satLabel);
+        root.getChildren().add(example);
+        root.getChildren().add(AdjustLayer);
+
+        hue.setTranslateX(20);
+        hue.setTranslateY(20);
+        hueLabel.setTranslateX(200);
+        hueLabel.setTranslateY(20);
+
+        saturation.setTranslateX(20);
+        saturation.setTranslateY(40);
+        satLabel.setTranslateX(200);
+        satLabel.setTranslateY(40);
+
+        example.setTranslateX(-30);
+        example.setTranslateY(10);
+        AdjustLayer.setTranslateX(-30);
+        AdjustLayer.setTranslateY(10);
+
+
 
         homeworld = p;
         primaryStage = s;
@@ -66,9 +86,7 @@ public class ColorChoosingScreen {
         saturation.setValue(1);
         brightness.setMax(1.0);
         brightness.setMin(0.0);
-        contrast.setMax(1.0);
-        contrast.setMin(0.0);
-        contrast.setValue(0.5);
+
 
 
         example.setScaleX(0.2);
@@ -76,7 +94,8 @@ public class ColorChoosingScreen {
         AdjustLayer.setScaleX(0.2);
         AdjustLayer.setScaleY(0.2);
 
-
+        left.getSprite().setOnMouseClicked(this::rotateIconLeft);
+        right.getSprite().setOnMouseClicked(this::rotateIconRight);
 
 
         next.getSprite().setOnMouseClicked(this::finishColor);
@@ -92,7 +111,6 @@ public class ColorChoosingScreen {
                 //color = new ColorAdjust();
                 System.out.println(hue.getValue());
 
-                color.setContrast(contrast.getValue());
                 color.setHue(hue.getValue());
                 color.setSaturation(saturation.getValue());
                 color.setBrightness(brightness.getValue());
@@ -113,9 +131,31 @@ public class ColorChoosingScreen {
     }
 
 
+    public void rotateIconLeft(MouseEvent event){
+        if(currentIconIndex == 0){
+            currentIconIndex = icons.length - 1;
+        } else{
+            currentIconIndex--;
+        }
+
+        example.setImage(new Image(icons[currentIconIndex]));
+
+    }
+
+    public void rotateIconRight(MouseEvent event){
+        if(currentIconIndex == icons.length-1){
+            currentIconIndex = 0;
+        } else{
+            currentIconIndex++;
+        }
+
+        example.setImage(new Image(icons[currentIconIndex]));
+    }
+
     public void finishColor(MouseEvent event){
         GalaxyScreen x = new GalaxyScreen(primaryStage,empire);
         empire.setMapColor(color);
+        empire.setIcon(example.getImage());
         x.galaxy.spawnEmpire(empire,homeworld);
         x.updateHexGrid();
         x.loadTopBarData(empire);
