@@ -106,6 +106,7 @@ public class GalaxyScreen {
                 grid[i][j].getAdjust().setOnMouseClicked(this::SelectHex);
                 hexes.getChildren().add(grid[i][j].getSprite());
                 hexes.getChildren().add(grid[i][j].getAdjust());
+                hexes.getChildren().add(grid[i][j].getSanityTest());
                 if(galaxy.getGrid()[i][j].getType() != StarType.NONE){
                     grid[i][j].setStar(galaxy.getGrid()[i][j]);
                 }
@@ -128,8 +129,17 @@ public class GalaxyScreen {
         for(int i = 0; i < galaxy.getEmpires().size();i++){
             System.out.println(" territory size: " + galaxy.getEmpires().get(i).getTerritory().size());
             for(int j = 0; j < galaxy.getEmpires().get(i).getTerritory().size();j++){
-                grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getSprite().setImage(new Image("startilebasenewclaimed.png"));
-                grid[galaxy.getEmpires().get(i).getTerritory().get(j).getX()][galaxy.getEmpires().get(i).getTerritory().get(j).getY()].getAdjust().setEffect(galaxy.getEmpires().get(i).getMapColor());
+                Star currentStar = galaxy.getEmpires().get(i).getTerritory().get(j);
+                String spriteChange = "tile_blank.png";
+                if(currentStar.getType() != StarType.NONE){
+                    spriteChange = "startilebasenewclaimed.png";
+                } else {
+                    spriteChange = "tile_base_1.png";
+                }
+
+
+                grid[currentStar.getX()][currentStar.getY()].getSprite().setImage(new Image(spriteChange));
+                grid[currentStar.getX()][currentStar.getY()].getAdjust().setEffect(galaxy.getEmpires().get(i).getMapColor());
             }
         }
 
@@ -199,6 +209,8 @@ public class GalaxyScreen {
 
         //empire.annexStar(galaxy.getGrid()[x][y]);
         //updateHexGrid();
+
+        System.out.println("Hex position: "+x+" "+y);
 
         Star temp = galaxy.getGrid()[x][y];
 

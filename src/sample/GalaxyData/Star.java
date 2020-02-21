@@ -53,6 +53,80 @@ public class Star {
 
     }
 
+    public Star[] findNeighbours(Star[][] grid,int mapX,int mapY){
+        Star[] neighbours = new Star[6];
+
+        System.out.println("MapX: "+mapX + " MapY: " + mapY);
+
+        if(y-2 >= 0){
+            neighbours[0] = grid[x][y-2];
+        } else{
+            neighbours[0] = null;
+        }
+        if(y+2 < mapY){
+            neighbours[1] = grid[x][y+2];
+        } else{
+            neighbours[1] = null;
+        }
+
+        if(y % 2 == 0){ //even
+
+            if(y-1 >= 0){
+                neighbours[2] = grid[x][y-1];
+            } else{
+                neighbours[2] = null;
+            }
+
+            if(y+1 < mapY){
+                neighbours[3] = grid[x][y+1];
+            } else{
+                neighbours[3] = null;
+            }
+
+            if(x-1 >= 0 && y+1 < mapY){
+                neighbours[4] = grid[x-1][y+1];
+            } else{
+                neighbours[4] = null;
+            }
+
+            if(x-1 >= 0 && y-1 >= 0){
+                neighbours[5] = grid[x-1][y-1];
+            } else{
+                neighbours[5] = null;
+            }
+
+        }
+        else{ //odd
+
+            if(x+1 < mapX && y-1 >= 0){
+                neighbours[2] = grid[x+1][y-1];
+            } else{
+                neighbours[2] = null;
+            }
+
+            if(x+1 < mapX && y+1 < mapY){
+                neighbours[3] = grid[x+1][y+1];
+            } else{
+                neighbours[3] = null;
+            }
+
+            if(y+1 < mapY){
+                neighbours[4] = grid[x][y+1];
+            } else{
+                neighbours[4] = null;
+            }
+
+            if(y-1 >= 0){
+                neighbours[5] = grid[x][y-1];
+            } else{
+                neighbours[5] = null;
+            }
+
+
+        }
+        return neighbours;
+    }
+
     public int getX() {
         return x;
     }

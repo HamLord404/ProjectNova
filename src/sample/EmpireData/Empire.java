@@ -75,7 +75,9 @@ public class Empire {
         return strengthTotal;
     }
 
-    public void annexStar(Star star){
+    public void claimTile(Star star){
+
+
         territory.add(star);
     }
 

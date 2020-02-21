@@ -13,8 +13,8 @@ public class Galaxy {
 
     private ArrayList<Empire> empires = new ArrayList<>();
 
-    int mapX = 10; //default value
-    int mapY = 10; //default value
+    int mapX = 12; //default value
+    int mapY = 18; //default value
 
     Pane root;
 
@@ -47,7 +47,19 @@ public class Galaxy {
 
     }
 
+    public void annexStar(Star star,Empire e){
+        e.getTerritory().add(star);
 
+        Star[] neighbourTiles = star.findNeighbours(grid,mapX,mapY);
+
+        for(int i = 0; i < neighbourTiles.length; i++){
+            if(neighbourTiles[i] != null){
+                e.claimTile(neighbourTiles[i]);
+            }
+        }
+
+
+    }
 
     public void spawnEmpire(Empire e,Planet p){
 
@@ -72,7 +84,7 @@ public class Galaxy {
 
         //Fleet f = new Fleet(e,s.getX(),s.getY(),ships,root);
 
-        e.annexStar(s);
+        annexStar(s,e);
 
     }
 
