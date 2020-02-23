@@ -1,9 +1,12 @@
 package sample.GalaxyData;
 
+import javafx.scene.effect.ColorAdjust;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import sample.Dictionaries.BuildableDictionary;
 import sample.EmpireData.*;
+import sample.Enums.GovernmentType;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -57,7 +60,7 @@ public class Galaxy {
                 e.claimTile(neighbourTiles[i]);
             }
         }
-
+        e.colonisePlanet(star,star.getX(),star.getY());
 
     }
 
@@ -71,7 +74,7 @@ public class Galaxy {
 
         s.getPlanets().add(p);
 
-        Colony homeworld = new Colony(p,s.getX(),s.getY());
+        Colony homeworld = new Colony(s,s.getX(),s.getY());
         homeworld.addPop(e.getFounders(),5);
         e.getColonies().add(homeworld);
         p.setColonised(true);
@@ -85,6 +88,51 @@ public class Galaxy {
         //Fleet f = new Fleet(e,s.getX(),s.getY(),ships,root);
 
         annexStar(s,e);
+
+        Species testSpecies = new Species();
+        Empire testEmpire = new Empire("The Alliance", GovernmentType.DEMOCRACY,testSpecies);
+        ColorAdjust testColor = new ColorAdjust();
+        testColor.setHue(0.8);
+        testColor.setSaturation(1);
+        testEmpire.setIcon(new Image("faction_4.png"));
+        testEmpire.setMapColor(testColor);
+        empires.add(testEmpire);
+
+
+        Species testSpecies2 = new Species();
+        Empire testEmpire2 = new Empire("The League", GovernmentType.OLIGARCHY,testSpecies);
+        ColorAdjust testColor2 = new ColorAdjust();
+        testColor2.setHue(0.1);
+        testColor2.setSaturation(1);
+        testEmpire2.setIcon(new Image("faction_2.png"));
+        testEmpire2.setMapColor(testColor2);
+        empires.add(testEmpire2);
+
+        Species testSpecies3 = new Species();
+        Empire testEmpire3 = new Empire("The Horde", GovernmentType.MONARCHY,testSpecies);
+        ColorAdjust testColor3 = new ColorAdjust();
+        testColor3.setHue(0.3);
+        testColor3.setSaturation(1);
+        testEmpire3.setIcon(new Image("faction_3.png"));
+        testEmpire3.setMapColor(testColor3);
+        empires.add(testEmpire3);
+
+
+        for(int i = 0; i < stars.size(); i++){
+            if(stars.get(i).getX() > mapX/2 && stars.get(i).getY() > mapY/2) {
+                annexStar(stars.get(i), e);
+            }
+            if(stars.get(i).getX() > mapX/2 && stars.get(i).getY() <= mapY/2){
+                annexStar(stars.get(i), testEmpire);
+            }
+            if(stars.get(i).getX() <= mapX/2 && stars.get(i).getY() > mapY/2){
+                annexStar(stars.get(i), testEmpire2);
+            }
+            if(stars.get(i).getX() <= mapX/2 && stars.get(i).getY() <= mapY/2){
+                annexStar(stars.get(i), testEmpire3);
+            }
+            //e.colonisePlanet(stars.get(i));
+        }
 
     }
 

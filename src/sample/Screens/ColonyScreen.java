@@ -49,7 +49,7 @@ public class ColonyScreen {
             b.getLabel().setOnMouseClicked(this::CommissionConstruction);
         }
 
-        planetName.getLabel().setText(c.getPlanet().getName());
+        //planetName.getLabel().setText(c.getPlanet().getName());
     }
 
     public void panelText(Colony c, Empire e){

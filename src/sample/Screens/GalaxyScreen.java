@@ -46,6 +46,8 @@ public class GalaxyScreen {
 
     ImageView background = new ImageView("space_bg.png");
 
+    ImageView stupidFix = new ImageView("select.png");
+
     Button endTurn = new Button("End Turn",root,800,600);
     Button tech = new Button("Technology",root,640,600);
     Button government = new Button("Government",root,480,600);
@@ -77,6 +79,8 @@ public class GalaxyScreen {
         });
 
         root.getChildren().add(background);
+        root.getChildren().add(stupidFix);
+        stupidFix.setTranslateY(2000);
         background.toBack();
 
         topBar.setScaleX(0.33);
@@ -115,7 +119,7 @@ public class GalaxyScreen {
                 grid[i][j].getTileHover().setOnMouseExited(this::MouseOff);
                 hexes.getChildren().add(grid[i][j].getSprite());
                 hexes.getChildren().add(grid[i][j].getAdjust());
-                hexes.getChildren().add(grid[i][j].getSanityTest());
+                //hexes.getChildren().add(grid[i][j].getSanityTest());
                 hexes.getChildren().add(grid[i][j].getTileHover());
                 grid[i][j].getTileHover().toFront();
 
@@ -144,8 +148,8 @@ public class GalaxyScreen {
         hexes.setScaleY(0.2);
         hexes.setTranslateX(-1700);
         hexes.setTranslateY(-800);
-        
 
+        hexes.getChildren().add(stupidFix);
 
     }
 

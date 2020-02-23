@@ -21,7 +21,7 @@ public class Hex {
     public Hex(Pane root,int x, int y){
         root.getChildren().add(sprite);
         root.getChildren().add(adjust);
-        root.getChildren().add(sanityTest);
+        //root.getChildren().add(sanityTest);
         root.getChildren().add(tileHover);
         adjust.setBlendMode(BlendMode.OVERLAY);
         tileHover.setVisible(false);

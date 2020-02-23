@@ -104,7 +104,7 @@ public class ColorChoosingScreen {
         right.getSprite().setOnMouseClicked(this::rotateIconRight);
 
 
-        next.getSprite().setOnMouseClicked(this::finishColor);
+        next.getSegmentGroup().setOnMouseClicked(this::finishColor);
         next.getLabel().setOnMouseClicked(this::finishColor);
     }
 

@@ -67,9 +67,9 @@ public class StarScreen {
         if(star.getPlanets().get(index).isColonised()){
             Colony c = null;
             for(Colony colony: empire.getColonies()){
-                if(colony.getPlanet() == star.getPlanets().get(index)){
-                    c = colony;
-                }
+                //if(colony.getPlanet() == star.getPlanets().get(index)){
+                //    c = colony;
+                //}
             }
 
 

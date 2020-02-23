@@ -42,10 +42,10 @@ public class Empire {
         mapColor.setSaturation(1);
     }
 
-    public void colonisePlanet(Planet planet,int x,int y){
-        Colony c = new Colony(planet,x,y);
+    public void colonisePlanet(Star star,int x,int y){
+        Colony c = new Colony(star,x,y);
         colonies.add(c);
-        planet.setColonised(true);
+        //star.setColonised(true);
         c.addPop(founders, (int)searchForModifier(Effect.STARTING_COLONY_POP));
     }
 
@@ -78,8 +78,6 @@ public class Empire {
     }
 
     public void claimTile(Star star){
-
-
         territory.add(star);
     }
 

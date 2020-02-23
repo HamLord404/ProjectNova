@@ -18,7 +18,7 @@ public class Colony {
 
     private ArrayList<Pop> pops = new ArrayList<>();
     private ArrayList<Improvement> improvements = new ArrayList<Improvement>();
-    private Planet planet;
+    private Star star;
     private int growthProgress;
     final int growthThreshold = 300;
     private int productionProgress;
@@ -29,8 +29,8 @@ public class Colony {
     private int expandCount = 0;
 
 
-    public Colony(Planet planet,int x,int y){
-        this.planet = planet;
+    public Colony(Star star,int x,int y){
+        this.star = star;
         this.x = x;
         this.y = y;
     }
@@ -201,11 +201,11 @@ public class Colony {
         this.currentConstruction = currentConstruction;
     }
 
-    public Planet getPlanet() {
-        return planet;
+    public Star getStar() {
+        return star;
     }
 
-    public void setPlanet(Planet planet) {
-        this.planet = planet;
+    public void setPlanet(Star star) {
+        this.star = star;
     }
 }
