@@ -6,6 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import sample.Enums.Ideology;
 import sample.GalaxyData.Hex;
+import sample.Screens.MainMenuScreen;
 import sample.Screens.SpeciesCreationScreen;
 
 import java.util.ArrayList;
@@ -28,8 +29,15 @@ public class Main extends Application {
 
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
-        SpeciesCreationScreen sp = new SpeciesCreationScreen(primaryStage);
-        primaryStage.setScene(sp.getSpeciesCreationScene());
+
+
+        MainMenuScreen mm = new MainMenuScreen(primaryStage);
+        primaryStage.setScene(mm.mainMenuScene);
+
+        //SpeciesCreationScreen sp = new SpeciesCreationScreen(primaryStage);
+        //primaryStage.setScene(sp.getSpeciesCreationScene());
+
+
         primaryStage.show();
     }
 

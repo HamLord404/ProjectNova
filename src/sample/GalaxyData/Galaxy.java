@@ -117,23 +117,12 @@ public class Galaxy {
         testEmpire3.setMapColor(testColor3);
         empires.add(testEmpire3);
 
-
-        for(int i = 0; i < stars.size(); i++){
-            if(stars.get(i).getX() > mapX/2 && stars.get(i).getY() > mapY/2) {
-                annexStar(stars.get(i), e);
-            }
-            if(stars.get(i).getX() > mapX/2 && stars.get(i).getY() <= mapY/2){
-                annexStar(stars.get(i), testEmpire);
-            }
-            if(stars.get(i).getX() <= mapX/2 && stars.get(i).getY() > mapY/2){
-                annexStar(stars.get(i), testEmpire2);
-            }
-            if(stars.get(i).getX() <= mapX/2 && stars.get(i).getY() <= mapY/2){
-                annexStar(stars.get(i), testEmpire3);
-            }
-            //e.colonisePlanet(stars.get(i));
-        }
-
+        s = stars.get(r.nextInt(stars.size()));
+        annexStar(s,testEmpire);
+        s = stars.get(r.nextInt(stars.size()));
+        annexStar(s,testEmpire2);
+        s = stars.get(r.nextInt(stars.size()));
+        annexStar(s,testEmpire3);
     }
 
     public void processTurn(Empire e){
