@@ -7,6 +7,7 @@ import javafx.scene.paint.Color;
 import sample.Dictionaries.BuildableDictionary;
 import sample.EmpireData.*;
 import sample.Enums.GovernmentType;
+import sample.Main;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -23,7 +24,9 @@ public class Galaxy {
 
     Star[][] grid;
 
-    public Galaxy(int mapX, int mapY,Pane root){
+    public Galaxy(Pane root){
+        mapX = Main.mapx;
+        mapY = Main.mapy;
         grid = new Star[mapX][mapY];
         this.root = root;
         createGalaxy(mapX,mapY);

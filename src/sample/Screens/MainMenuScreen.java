@@ -37,11 +37,14 @@ public class MainMenuScreen {
     }
 
     public void startNewGame(MouseEvent event){
-        SpeciesCreationScreen sp = new SpeciesCreationScreen(stage);
-        stage.setScene(sp.getSpeciesCreationScene());
+        //SpeciesCreationScreen sp = new SpeciesCreationScreen(stage);
+        //        //stage.setScene(sp.getSpeciesCreationScene());
+
+        NewGameScreen sp = new NewGameScreen(stage);
+        stage.setScene(sp.newGameScene);
     }
 
-    
+
 
     public void exitGame(MouseEvent event){
         System.exit(0);

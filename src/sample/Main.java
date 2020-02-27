@@ -17,6 +17,11 @@ public class Main extends Application {
     ArrayList<Hex> overlay = new ArrayList<Hex>();
     Pane root = new Pane();
 
+    public static int mapx = 12;
+    public static int mapy = 18;
+    public static int numPlayers = 2;
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 

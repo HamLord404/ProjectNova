@@ -23,6 +23,7 @@ import sample.GalaxyData.Galaxy;
 import sample.GalaxyData.Hex;
 import sample.GalaxyData.Star;
 import sample.GalaxyData.StarType;
+import sample.Main;
 import sample.UIElements.Button;
 
 
@@ -38,10 +39,10 @@ public class GalaxyScreen {
     int mapX = 12;
     int mapY = 18;
 
-    Hex[][] grid = new Hex[mapX][mapY];
+    Hex[][] grid;
     Group hexes = new Group();
     Pane root = new Pane();
-    public Galaxy galaxy = new Galaxy(mapX,mapY,root);
+    public Galaxy galaxy = new Galaxy(root);
     Scene galaxyScene = new Scene(root,1000,700);
 
     ImageView background = new ImageView("space_bg.png");
@@ -67,6 +68,10 @@ public class GalaxyScreen {
 
     public GalaxyScreen(Stage s,Empire empire){
         this.empire = empire;
+
+        mapX = Main.mapx;
+        mapY = Main.mapy;
+        grid = new Hex[mapX][mapY];
         generateHexGrid();
         updateHexGrid();
 
